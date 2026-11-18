@@ -1,0 +1,1420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Food Processing &amp; Packaging Lab (FPPL), Department of Food and Nutrition, Kyung Hee University. Active and intelligent food packaging research.">
+<meta property="og:title" content="Food Processing &amp; Packaging Lab (FPPL) · Kyung Hee University">
+<meta property="og:description" content="경희대학교 식품영양학과 식품가공·포장 연구실 · Active and intelligent food packaging research">
+<meta property="og:image" content="images/gallery/lab-group.jpg">
+<title>Food Processing &amp; Packaging Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap">
+<style>
+[hidden] { display: none !important; }
+/* Layout: Kyung Hee Blue hero with an interactive journal-style graphical abstract of the four research areas; every other section is its own tab view; Kyung Hee Red and Gold only as small accents */
+:root {
+  --bg: #FFFFFF;
+  --tint: #F4F6FA;
+  --fg: #121826;
+  --muted: #5B6474;
+  --line: #E3E7EE;
+  --navy: #0D326F;
+  --navy-deep: #082250;
+  --link: #0D326F;
+  --crimson: #A40F16;
+  --gold: #C0A353;
+  --soft: #EBF0F8;
+  --ex: #B26B12;
+  --on-navy: #F3F6FB;
+  --on-navy-muted: #B9C6DD;
+  --ill-bg: #F1F4FA;
+  --ill-card: #FFFFFF;
+  --ill-ink: #1C2A44;
+  --ill-muted: #5B6474;
+  --ill-line: #C9D3E3;
+  --ill-film: #0D326F;
+  --ill-bubble: #5C86C9;
+  --hdr: 84px;
+  --font-ko: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-en: "Outfit", "IBM Plex Sans KR", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1222; --tint: #0F182B; --fg: #E7ECF4; --muted: #9AA6BA; --line: #22304A;
+    --link: #9DB8EA; --crimson: #E0697C; --soft: #16223A; --ex: #E2A64E;
+    --ill-bg: #111B2E; --ill-card: #18243B; --ill-ink: #E7ECF4; --ill-muted: #9AA6BA; --ill-line: #2E3E5C; --ill-film: #4F78BF; --ill-bubble: #8FB0E8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1222; --tint: #0F182B; --fg: #E7ECF4; --muted: #9AA6BA; --line: #22304A;
+  --link: #9DB8EA; --crimson: #E0697C; --soft: #16223A; --ex: #E2A64E;
+  --ill-bg: #111B2E; --ill-card: #18243B; --ill-ink: #E7ECF4; --ill-muted: #9AA6BA; --ill-line: #2E3E5C; --ill-film: #4F78BF; --ill-bubble: #8FB0E8;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--hdr) + 16px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-ko); font-size: 1rem; line-height: 1.75; letter-spacing: -0.005em; -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: break-word; }
+h1, h2, h3, h4 { text-wrap: balance; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+a { color: var(--link); }
+:focus-visible { outline: 2px solid var(--crimson); outline-offset: 3px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.ex { color: var(--ex); font-weight: 600; font-size: 0.85em; }
+
+/* Header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--hdr); }
+.brand { display: flex; align-items: center; gap: 16px; color: var(--fg); text-decoration: none; min-width: 0; }
+.logo-slot { flex: none; display: flex; align-items: center; }
+.logo-slot img { height: 40px; width: auto; max-width: none; display: block; }
+:root[data-theme="dark"] .site-header .logo-slot { background: #fff; padding: 4px 8px; border-radius: 6px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .site-header .logo-slot { background: #fff; padding: 4px 8px; border-radius: 6px; } }
+.brand-div { width: 1px; height: 36px; background: var(--line); flex: none; }
+.lab-logo { display: flex; align-items: center; flex: none; }
+.lab-logo img { height: 58px; width: auto; max-width: none; display: block; }
+.lab-logo .on-dark { display: none; }
+:root[data-theme="dark"] .site-header .lab-logo .on-light { display: none; }
+:root[data-theme="dark"] .site-header .lab-logo .on-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-header .lab-logo .on-light { display: none; }
+  :root:not([data-theme="light"]) .site-header .lab-logo .on-dark { display: block; }
+}
+.right { display: flex; align-items: center; gap: 10px; }
+.nav { display: flex; gap: 2px; }
+.nav a { color: var(--fg); text-decoration: none; font-size: 0.92rem; font-weight: 500; padding: 8px 12px; border-radius: 6px; }
+.nav a:hover { color: var(--link); background: var(--soft); }
+.nav a[aria-current="page"] { color: var(--link); background: var(--soft); font-weight: 600; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; }
+.lang button { font: 600 0.75rem var(--font-en); letter-spacing: 0.04em; border: 0; background: none; color: var(--muted); padding: 4px 11px; border-radius: 999px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+
+/* Hero */
+.hero { background: radial-gradient(70% 90% at 80% 40%, #14468F 0%, transparent 70%), var(--navy-deep); color: var(--on-navy); overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.25fr); gap: 40px; align-items: center; padding-block: 56px; }
+.eyebrow { font: 500 0.74rem var(--font-en); letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 22px; display: flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--crimson); flex: none; }
+.hero .eyebrow { color: var(--on-navy-muted); }
+.hero h1 { font-weight: 600; font-size: clamp(2rem, 3.9vw, 2.9rem); line-height: 1.25; letter-spacing: -0.03em; margin: 0; text-wrap: initial; }
+.hero .alt-name { font-size: 1.05rem; font-weight: 400; color: var(--on-navy-muted); margin: 10px 0 0; }
+.hero .lede { color: #CBD5E6; font-weight: 300; font-size: 1.05rem; max-width: 34rem; margin: 24px 0 32px; }
+@media (min-width: 1081px) { .hero .lede { min-height: 3.5em; } .hero .alt-name { white-space: nowrap; } }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500; font-size: 0.92rem; padding: 11px 20px; border-radius: 6px; border: 1px solid transparent; }
+.btn-solid { background: #fff; color: var(--navy-deep); }
+.btn-solid:hover { background: #E6ECF6; }
+.btn-line { color: var(--on-navy); border-color: rgba(243,246,251,.35); }
+.btn-line:hover { background: rgba(255,255,255,.08); }
+/* Hero figure: a journal-style graphical abstract on a white card (one fixed look in both themes) */
+.figure { margin: 0; min-width: 0; background: #FFFFFF; border-radius: 16px; padding: 14px 14px 10px; box-shadow: 0 30px 60px -32px rgba(0, 0, 0, .65); }
+.figure svg { width: 100%; height: auto; max-width: 100%; display: block; font-family: var(--font-ko); }
+.figure figcaption { color: #3A4558; font-size: 0.95rem; line-height: 1.55; padding: 8px 8px 2px; min-height: 3.2em; }
+.figure figcaption b { color: #0D326F; font-weight: 600; }
+.figure a { cursor: pointer; outline: none; }
+.figure .sector { transition: transform .25s ease, opacity .25s ease; }
+.figure svg.has-active .sector { opacity: .32; }
+.figure svg .sector.on { opacity: 1; transform: translate(var(--dx), var(--dy)); }
+.figure svg .sector.on .ring { filter: drop-shadow(0 8px 12px rgba(13, 50, 111, .22)); stroke-opacity: 1; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) { .figure .sector { transition: none; } }
+
+/* Sections and tab views */
+main { min-height: 60vh; }
+section.sec { padding-block: 80px 96px; }
+section.sec.tint { background: var(--tint); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 40px; margin-bottom: 44px; align-items: end; }
+.sec-head .eyebrow { color: var(--link); margin-bottom: 12px; }
+.sec-head h2 { font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.3rem); line-height: 1.3; letter-spacing: -0.03em; margin: 0; }
+.sec-head p { margin: 0; color: var(--muted); max-width: 56ch; }
+.subhead { font-weight: 600; font-size: 1.15rem; letter-spacing: -0.02em; margin: 64px 0 14px; }
+
+/* About */
+.photo-wide { position: relative; aspect-ratio: 21 / 8; max-width: 100%; margin: 0 0 48px; border-radius: 10px; overflow: hidden; background: var(--soft); }
+.photo-wide .slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 1.2s ease; }
+.photo-wide .slide.on { opacity: 1; }
+#lab-photo-1 { object-position: 50% 24%; }
+#lab-photo-2 { object-position: 50% 30%; }
+.dots { position: absolute; left: 14px; bottom: 12px; display: flex; gap: 6px; z-index: 2; }
+.dots button { width: 9px; height: 9px; padding: 0; border-radius: 50%; border: 0; background: rgba(255,255,255,.55); cursor: pointer; }
+.dots button[aria-pressed="true"] { background: #fff; }
+@media (prefers-reduced-motion: reduce) { .photo-wide .slide { transition: none; } }
+.credit { position: absolute; right: 12px; bottom: 10px; z-index: 2; font-size: 0.7rem; color: #fff; background: rgba(8, 34, 80, .55); padding: 2px 8px; border-radius: 4px; }
+.about { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 64px; }
+.about p { margin: 0 0 16px; color: var(--muted); max-width: 62ch; }
+.about p.first { color: var(--fg); font-size: 1.15rem; font-weight: 500; }
+.facts { margin: 0; border-top: 2px solid var(--navy); }
+.facts div { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.facts dt { font-size: 0.82rem; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 500; }
+
+/* Research */
+.areas { display: grid; gap: 28px; }
+.area { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.area:nth-child(even) .ill { order: 2; }
+.area .ill { background: var(--ill-bg); padding: 20px 22px; display: grid; place-items: center; min-width: 0; }
+.area .ill svg { width: 100%; height: auto; max-width: 100%; display: block; font-family: var(--font-ko); }
+.area .body { padding: 36px 36px 32px; display: grid; gap: 12px; align-content: center; min-width: 0; }
+.area .num { font: 600 0.8rem var(--font-en); letter-spacing: 0.08em; color: var(--crimson); text-transform: uppercase; }
+.area h3 { font-weight: 600; font-size: 1.45rem; letter-spacing: -0.02em; margin: 0; line-height: 1.35; }
+.area p { margin: 0; color: var(--muted); }
+.deep { grid-column: 1 / -1; order: 3; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 36px; padding: 32px 36px 36px; border-top: 1px solid var(--line); }
+.deep h4 { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--link); margin: 0 0 6px; }
+.deep h4:not(:first-child) { margin-top: 22px; }
+.deep p { color: var(--fg); font-size: 0.95rem; line-height: 1.8; }
+.paper { margin: 0; display: grid; gap: 12px; align-content: start; }
+.paper .pf { border-radius: 10px; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+.paper .pf img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; }
+.paper .pf.tbd { aspect-ratio: 2 / 1; display: grid; place-items: center; text-align: center; padding: 20px; border-style: dashed; background: var(--soft); color: var(--muted); font-size: 0.86rem; }
+.paper .fcap { margin: -4px 0 0; font-size: 0.82rem; color: var(--muted); line-height: 1.55; }
+.paper figcaption { font-size: 0.85rem; line-height: 1.6; color: var(--muted); }
+.paper figcaption .lead { display: block; color: var(--fg); font-weight: 600; margin-bottom: 2px; }
+.paper figcaption .pt { color: var(--fg); }
+.paper figcaption .if { display: inline-block; font: 600 0.74rem var(--font-en); color: #fff; background: var(--navy); border-radius: 4px; padding: 1px 6px; margin: 0 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.tags span { font: 500 0.75rem var(--font-en); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg); }
+.patents { border-top: 2px solid var(--navy); }
+.patent { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 24px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.patent b { font-weight: 500; }
+.patent .meta { color: var(--muted); font-size: 0.88rem; }
+.status { font-size: 0.78rem; color: var(--muted); white-space: nowrap; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); }
+.status.on { color: var(--crimson); border-color: color-mix(in srgb, var(--crimson) 40%, transparent); }
+
+/* Filters / sub tabs */
+.filters { display: flex; flex-wrap: wrap; gap: 4px; }
+.filters button { font: 500 0.88rem var(--font-ko); padding: 6px 14px; border-radius: 999px; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--muted); }
+.filters button:hover { color: var(--fg); }
+.filters button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.filters small { font-size: 0.75em; opacity: .65; margin-left: 2px; }
+
+/* People */
+.prof { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 44px; padding: 32px; align-items: start; margin-bottom: 48px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+.photo { background: linear-gradient(160deg, var(--soft), color-mix(in srgb, var(--soft) 60%, var(--line))); display: grid; place-items: center; color: var(--link); font: 500 1.6rem var(--font-en); max-width: 100%; overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+.prof .photo { aspect-ratio: 3 / 4; border-radius: 10px; box-shadow: 0 18px 40px -24px rgba(8, 34, 80, .55); position: sticky; top: calc(var(--hdr) + 24px); }
+.prof .photo img { object-position: 50% 20%; }
+.prof .role { font-size: 0.85rem; color: var(--crimson); font-weight: 500; }
+.prof h3 { font-weight: 600; font-size: 1.7rem; letter-spacing: -0.03em; margin: 4px 0 0; }
+.prof h3 small { font: 400 1rem var(--font-en); color: var(--muted); margin-left: 10px; letter-spacing: 0; }
+.prof p { color: var(--muted); margin: 14px 0 0; max-width: 62ch; }
+.pinfo { margin: 16px 0 0; display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 4px 14px; font-size: 0.92rem; }
+.pinfo dt { color: var(--muted); }
+.pinfo dd { margin: 0; overflow-wrap: anywhere; }
+.metrics { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.metrics b { display: block; font: 600 1.6rem var(--font-en); color: var(--link); font-variant-numeric: tabular-nums; line-height: 1.2; }
+.metrics span { font-size: 0.8rem; color: var(--muted); }
+.note { font-size: 0.76rem !important; color: var(--muted); margin-top: 10px !important; }
+.awards { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); }
+.awards h4 { margin: 0 0 10px; font-size: 1rem; font-weight: 600; }
+.awards ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.awards li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 12px; font-size: 0.92rem; }
+.awards time { font: 500 0.92rem var(--font-en); color: var(--link); font-variant-numeric: tabular-nums; }
+.members { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 32px 24px; margin-top: 28px; }
+.member { display: grid; gap: 4px; align-content: start; }
+.member .photo { aspect-ratio: 1 / 1; border-radius: 8px; margin-bottom: 10px; }
+.member h4 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.member .pos { font-size: 0.82rem; color: var(--link); font-weight: 500; }
+.member .meta { font: 400 0.8rem var(--font-ko); color: var(--muted); font-variant-numeric: tabular-nums; }
+.member .field { margin: 6px 0 0; font-size: 0.86rem; color: var(--fg); line-height: 1.6; }
+.member .work { margin: 6px 0 0; font-size: 0.86rem; line-height: 1.55; }
+.member .work span { display: block; font-size: 0.74rem; color: var(--muted); }
+.scholar { justify-self: start; margin-top: 8px; display: inline-flex; align-items: center; gap: 6px; font: 500 0.78rem var(--font-en); text-decoration: none; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--link); }
+.scholar:hover { border-color: var(--link); }
+.scholar.off { color: var(--muted); border-style: dashed; }
+.scholar svg { width: 12px; height: 12px; }
+.empty { color: var(--muted); }
+
+/* Publications */
+.pub-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.search { font: inherit; font-size: 0.92rem; padding: 9px 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); width: min(300px, 100%); }
+.pub-count { margin: 0 0 6px; font-size: 0.85rem; color: var(--muted); }
+.pubs { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+.pub { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.pub .yr { font: 500 1.1rem var(--font-en); color: var(--link); font-variant-numeric: tabular-nums; }
+.pub .t { font-weight: 500; margin: 0 0 4px; line-height: 1.5; }
+.pub .t a { color: inherit; text-decoration: none; }
+.pub .t a:hover { color: var(--link); text-decoration: underline; }
+.pub .a { margin: 0; color: var(--muted); font-size: 0.88rem; }
+.pub .a b { color: var(--fg); font-weight: 600; }
+.pub .j { margin: 2px 0 0; font-size: 0.88rem; font-style: italic; }
+.type { font: 500 0.7rem var(--font-en); letter-spacing: 0.04em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 8px; font-style: normal; vertical-align: 2px; }
+.more { margin: 24px 0 0; }
+.more a { font-weight: 500; }
+
+/* News */
+.feature { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); margin-bottom: 40px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg); }
+.feature .pic { position: relative; min-height: 100%; }
+.feature .pic img { width: 100%; height: 100%; object-fit: cover; object-position: 45% 30%; display: block; aspect-ratio: 3 / 2; }
+.feature .txt { padding: 32px; display: grid; gap: 12px; align-content: start; }
+.feature .src { font: 500 0.78rem var(--font-en); letter-spacing: 0.06em; color: var(--crimson); text-transform: uppercase; }
+.feature h3 { margin: 0; font-size: 1.45rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.35; }
+.feature .sub { margin: 0; color: var(--link); font-weight: 500; font-size: 0.95rem; }
+.feature p.sum { margin: 0; color: var(--muted); }
+.fstats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.fstats b { display: block; font: 600 1.35rem var(--font-en); color: var(--link); font-variant-numeric: tabular-nums; }
+.fstats span { font-size: 0.76rem; color: var(--muted); line-height: 1.4; display: block; }
+.news { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+.news li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.news time { font: 500 1rem var(--font-en); color: var(--link); font-variant-numeric: tabular-nums; }
+.news .tag { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 1px 8px; border-radius: 4px; margin-right: 8px; background: var(--soft); color: var(--link); vertical-align: 1px; }
+.news .tag.award { background: color-mix(in srgb, var(--gold) 22%, transparent); color: color-mix(in srgb, var(--gold) 55%, var(--fg)); }
+.news .tag.story { background: color-mix(in srgb, var(--crimson) 12%, transparent); color: var(--crimson); }
+:root[data-theme="dark"] .facts, :root[data-theme="dark"] .patents, :root[data-theme="dark"] .pubs, :root[data-theme="dark"] .news { border-top-color: var(--link); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .facts, :root:not([data-theme="light"]) .patents, :root:not([data-theme="light"]) .pubs, :root:not([data-theme="light"]) .news { border-top-color: var(--link); } }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 24px; }
+.g-item { margin: 0; display: grid; gap: 8px; }
+.g-item button { padding: 0; border: 0; background: var(--soft); border-radius: 8px; overflow: hidden; cursor: zoom-in; aspect-ratio: 3 / 2; max-width: 100%; }
+.g-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.g-item button:hover img { transform: scale(1.03); }
+.g-item figcaption { font-size: 0.86rem; color: var(--muted); line-height: 1.5; }
+.g-item figcaption time { display: block; font: 500 0.78rem var(--font-en); color: var(--link); }
+.lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(5, 12, 26, .92); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.lightbox[hidden] { display: none; }
+.lightbox figure { margin: 0; display: grid; gap: 10px; justify-items: center; min-width: 0; }
+.lightbox img { max-width: 100%; max-height: 78vh; object-fit: contain; border-radius: 6px; }
+.lightbox figcaption { color: #DCE4F2; font-size: 0.9rem; text-align: center; max-width: 60ch; }
+.lb-nav, .lb-close { background: rgba(255,255,255,.1); color: #fff; border: 0; border-radius: 999px; cursor: pointer; font-size: 1.6rem; line-height: 1; width: 44px; height: 44px; }
+.lb-close { position: absolute; top: max(16px, env(safe-area-inset-top, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (prefers-reduced-motion: reduce) { .g-item img { transition: none; } }
+
+/* Contact */
+.contact { background: var(--navy-deep); color: var(--on-navy); }
+.contact .wrap { padding-block: 80px 36px; }
+.contact .eyebrow { color: var(--on-navy-muted); }
+.cgrid { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 40px; }
+.cgrid h2 { font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -0.03em; line-height: 1.3; margin: 0 0 12px; }
+.cgrid .lead { color: var(--on-navy-muted); margin: 0; }
+.cgrid h3 { font: 500 0.74rem var(--font-en); letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-navy-muted); margin: 6px 0 10px; }
+.cgrid p { margin: 0 0 6px; font-size: 0.94rem; }
+.cgrid a { color: #BFD2F5; }
+.foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 64px; padding-top: 22px; border-top: 1px solid rgba(243,246,251,.14); font-size: 0.8rem; color: var(--on-navy-muted); }
+.foot-logos { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.contact .lab-logo .on-light { display: none; }
+.contact .lab-logo .on-dark { display: block; }
+.contact .lab-logo img { height: 60px; }
+.contact .logo-slot { background: #fff; padding: 8px 12px; border-radius: 6px; }
+.contact .logo-slot img { height: 36px; }
+.contact .ex { color: #F0B860; }
+
+/* Responsive */
+@media (max-width: 1120px) {
+  :root { --hdr: 128px; }
+  .site-header .wrap { height: auto; flex-wrap: wrap; padding-block: 10px 0; }
+  .right { display: contents; }
+  .lang { order: 2; margin-left: auto; }
+  .nav { order: 3; flex: 1 0 100%; min-width: 0; margin-top: 8px; border-top: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; gap: 0; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { padding: 11px 12px 9px; white-space: nowrap; border-radius: 0; border-bottom: 2px solid transparent; }
+  .nav a:hover, .nav a[aria-current="page"] { background: none; }
+  .nav a[aria-current="page"] { border-bottom-color: var(--link); }
+  .about, .sec-head { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  /* medium widths: text and figure stay side by side as one block */
+  .hero .wrap { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 28px; padding-block: 40px; }
+  .hero h1 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
+  .hero .lede { font-size: 0.98rem; margin: 18px 0 24px; }
+  .area { grid-template-columns: minmax(0, 1fr); }
+  .area:nth-child(even) .ill { order: 0; }
+  .deep { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 26px 24px 28px; }
+  .cgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+  .cgrid > :first-child { grid-column: 1 / -1; }
+  section.sec { padding-block: 64px 72px; }
+}
+@media (max-width: 720px) {
+  /* narrow: title, then the figure right away, then the short intro and buttons */
+  .hero .wrap { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-block: 28px 36px; }
+  .hero-text { display: contents; }
+  .hero .eyebrow { order: 1; } .hero h1 { order: 2; } .hero .alt-name { order: 3; }
+  .figure { order: 4; margin: 20px 0 0; max-width: none; padding: 8px 8px 6px; }
+  .hero .lede { order: 5; margin: 20px 0; }
+  .hero .cta { order: 6; }
+}
+@media (max-width: 640px) {
+  :root { --hdr: 116px; }
+  .area .body { padding: 24px 22px; }
+  .area .ill { padding: 12px; }
+  .prof { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 22px; }
+  .prof .photo { max-width: 220px; position: static; }
+  .pinfo { grid-template-columns: 92px minmax(0, 1fr); }
+  .members { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .cgrid { grid-template-columns: minmax(0, 1fr); }
+  .pub, .news li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .patent { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+  .photo-wide { aspect-ratio: 4 / 3; }
+  .feature { grid-template-columns: minmax(0, 1fr); }
+  .feature .txt { padding: 22px; }
+  .fstats { grid-template-columns: minmax(0, 1fr); }
+  .brand-div, .site-header .logo-slot { display: none; }
+  .lab-logo img { height: 46px; }
+}
+</style>
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Food Processing &amp; Packaging Lab, Kyung Hee University">
+      <span class="logo-slot" data-logo></span>
+      <span class="brand-div" aria-hidden="true"></span>
+      <span class="lab-logo" data-fppl></span>
+    </a>
+    <div class="right">
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#about" data-v="home" data-i="nAbout"></a><a href="#research" data-v="research" data-i="nResearch"></a><a href="#people" data-v="people" data-i="nPeople"></a>
+        <a href="#publications" data-v="publications" data-i="nPubs"></a><a href="#news" data-v="news" data-i="nNews"></a><a href="#gallery" data-v="gallery" data-i="nGallery"></a><a href="#contact" data-i="nContact"></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="lang-ko" data-lang="ko">KO</button><button type="button" id="lang-en" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 홈 탭: 히어로 + About -->
+  <section class="hero" data-view="home">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow" data-i="heroEyebrow"></p>
+        <h1 data-i="heroTitle"></h1>
+        <p class="alt-name" data-i="heroAlt"></p>
+        <p class="lede" data-i="heroLede"></p>
+        <div class="cta">
+          <a class="btn btn-solid" href="#research" data-i="ctaResearch"></a>
+          <a class="btn btn-line" href="#contact" data-i="ctaJoin"></a>
+        </div>
+      </div>
+      <figure class="figure" id="overview-fig">
+        <div id="overview"></div>
+        <figcaption id="overview-cap" aria-live="polite"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="about" data-view="home">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">About</p><h2 data-i="aboutTitle"></h2></div></div>
+      <figure class="photo-wide" id="lab-slides"><img class="slide on" id="lab-photo-1" alt=""><img class="slide" id="lab-photo-2" alt=""><div class="dots"><button type="button" id="dot-1" aria-pressed="true" aria-label="1"></button><button type="button" id="dot-2" aria-pressed="false" aria-label="2"></button></div><figcaption class="credit" data-i="credit"></figcaption></figure>
+      <div class="about">
+        <div><p class="first" data-i="about1"></p><p data-i="about2"></p></div>
+        <dl class="facts" id="facts"></dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 연구 탭 -->
+  <section class="sec tint" id="research" data-view="research">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Research</p><h2 data-i="resTitle"></h2></div><p data-i="resSub"></p></div>
+      <div class="areas" id="areas"></div>
+      <h3 class="subhead" data-i="patentTitle"></h3>
+      <div class="patents" id="patents"></div>
+    </div>
+  </section>
+
+  <!-- 구성원 탭 -->
+  <section class="sec" id="people" data-view="people">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">People</p><h2 data-i="peopleTitle"></h2></div></div>
+      <div class="prof" id="prof"></div>
+      <div class="filters" id="member-filters" role="group" aria-label="Member group"></div>
+      <div class="members" id="member-grid"></div>
+    </div>
+  </section>
+
+  <!-- 연구성과 탭 -->
+  <section class="sec tint" id="publications" data-view="publications">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Publications</p><h2 data-i="pubTitle"></h2></div></div>
+      <div class="pub-tools">
+        <div class="filters" id="pub-filters" role="group" aria-label="Year"></div>
+        <label for="pub-search" style="position:absolute;left:-9999px" data-i="searchPh"></label>
+        <input id="pub-search" class="search" type="search">
+      </div>
+      <p class="pub-count" id="pub-count" aria-live="polite"></p>
+      <ul class="pubs" id="pub-list"></ul>
+      <p class="more"><a href="https://khu.elsevierpure.com/en/persons/jun-tae-kim/" target="_blank" rel="noopener" data-i="pubMore"></a></p>
+    </div>
+  </section>
+
+  <!-- 소식 탭 -->
+  <section class="sec" id="news" data-view="news">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">News</p><h2 data-i="newsTitle"></h2></div></div>
+      <article class="feature" id="feature"></article>
+      <ul class="news" id="news-list"></ul>
+    </div>
+  </section>
+
+  <!-- 갤러리 탭 -->
+  <section class="sec" id="gallery" data-view="gallery">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Gallery</p><h2 data-i="galleryTitle"></h2></div><p data-i="gallerySub"></p></div>
+      <div class="filters" id="gallery-filters" role="group" aria-label="Category"></div>
+      <div class="gallery" id="gallery-grid"></div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Close">×</button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Next">›</button>
+</div>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="cgrid">
+      <div><p class="eyebrow">Contact</p><h2 data-i="joinTitle"></h2><p class="lead" data-i="joinLead"></p></div>
+      <div><h3>Address</h3><p data-i="address"></p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Kyung%20Hee%20University%20Seoul%20Campus" target="_blank" rel="noopener" data-i="map"></a></p></div>
+      <div><h3>Phone</h3><p>02-961-9408</p><h3 style="margin-top:18px">Directions</h3><p data-i="directions"></p></div>
+    </div>
+    <div class="foot">
+      <span class="foot-logos"><span class="lab-logo" data-fppl></span><span class="logo-slot" data-logo></span></span>
+      <span><span data-i="copyright"></span> · <span data-i="updated"></span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   로고·사진은 아래에 data URI로 들어 있습니다. 파일로 분리할 때는 경로("images/...")로 바꾸면 됩니다.
+   ===================================================================== */
+// ===== 이미지 경로 =====
+// 사진은 images/ 폴더에 있습니다. 같은 이름으로 파일만 바꿔 넣으면 사이트의 사진도 바뀝니다.
+// 구성원 사진 추가: images/people/에 사진을 넣고 아래 MEMBER_PHOTOS에 한 줄 추가하거나,
+// 구성원 목록의 photo에 경로를 직접 적어도 됩니다 (예: photo: "images/people/gildong.jpg").
+const KHU_LOGO = { ko: "images/logo/khu-ko.png", en: "images/logo/khu-en.png" };
+const FPPL_LOGO = { light: "images/logo/fppl.png", dark: "images/logo/fppl-dark.png" };
+const PROF_PHOTO = "images/people/professor.jpg";
+const LAB_PHOTO = "images/gallery/lab-well-plate.jpg";
+const GROUP_PHOTO = "images/gallery/lab-group.jpg";
+const MEMBER_PHOTOS = { hyojin: "images/people/hyojin.jpg", ayoung: "images/people/ayoung.jpg", youngsu: "images/people/youngsu.jpg", sasi: "images/people/sasi.jpg", subin: "images/people/subin.jpg", arul: "images/people/arul.jpg", jaeho: "images/people/jaeho.jpg" };
+const PROF_FEATURE = "images/news/webzine-fellow.jpg";
+const PAPER_FIG = { active: "images/research/active.jpg", intel: "images/research/intelligent.jpg", eco: "images/research/eco.jpg", safety: "images/research/safety.jpg" };
+
+/* 내용 수정: UI(화면 문구)와 LAB(연구실 데이터)만 고치면 됩니다. { ko, en } 형식 */
+const UI = {
+  nAbout: { ko: "소개", en: "About" }, nResearch: { ko: "연구", en: "Research" }, nPeople: { ko: "구성원", en: "People" },
+  nPubs: { ko: "연구성과", en: "Publications" }, nNews: { ko: "소식", en: "News" }, nGallery: { ko: "갤러리", en: "Gallery" }, nContact: { ko: "연락처", en: "Contact" },
+  heroEyebrow: { ko: "경희대학교 식품영양학과", en: "Kyung Hee University · Food &amp; Nutrition" },
+  heroTitle: { ko: "식품을 지키는 포장,<br>더 오래, 더 안전하게", en: "Protecting food,<br>longer and safer" },
+  heroAlt: { ko: "식품가공·포장 연구실 (FPPL)", en: "Food Processing &amp; Packaging Lab (FPPL)" },
+  heroLede: { ko: "활성 포장과 지능형 포장을 중심으로, 식품의 저장성과 안전을 함께 높이는 포장을 연구합니다.",
+              en: "We study packaging that keeps food fresh and safe for longer, centered on active and intelligent packaging." },
+  ctaResearch: { ko: "연구 분야 보기", en: "Our research" }, ctaJoin: { ko: "연구실 지원 안내", en: "Join the lab" },
+  credit: { ko: "사진: 경희대학교 커뮤니케이션센터", en: "Photo: Kyung Hee University Communication Center" },
+  groupPhotoAlt: { ko: "김준태 교수와 연구실 구성원들이 실험실에서 필름 시료를 함께 살펴보는 모습", en: "Prof. Kim and lab members examining film samples together in the lab" },
+  labPhotoAlt: { ko: "연구실 구성원들이 실험실에서 시료 플레이트를 함께 살펴보는 모습", en: "Lab members examining a sample plate together in the lab" },
+  aboutTitle: { ko: "식품 포장으로 식품의 가치를 지킵니다", en: "Protecting food through packaging" },
+  about1: { ko: "식품가공·포장 연구실은 식품의 품질과 안전을 지키는 포장 소재와 기술을 연구합니다.",
+            en: "Our lab develops packaging materials and technologies that protect food quality and safety." },
+  about2: { ko: "항균·항산화 기능으로 식품을 지키는 활성 포장, 색 변화로 신선도를 알려주는 지능형 포장, 농산물 부산물과 생분해 소재를 활용한 친환경 포장, 그리고 포장재의 안전성 평가를 연구합니다. 이를 통해 식품가공과 포장 분야의 전문 인력을 양성하는 것을 목표로 합니다.",
+            en: "We study active packaging that protects food through antimicrobial and antioxidant functions, intelligent packaging that signals freshness through color change, eco-friendly packaging made from crop by-products and biodegradable materials, and the safety assessment of packaging. Through this work we train specialists in food processing and packaging." },
+  resTitle: { ko: "연구 분야", en: "Research areas" },
+  deepBg: { ko: "연구 배경", en: "Background" }, deepMethod: { ko: "연구 방법", en: "Approach" }, deepCase: { ko: "대표 연구", en: "Representative study" },
+  ourWork: { ko: "본 연구실 선행결과", en: "Our previous work" },
+  figTbd: { ko: "[예시] 대표 논문의 그래픽 초록이 들어갈 자리입니다", en: "[Example] The representative paper's graphical abstract goes here" },
+  resSub: { ko: "식품의 저장성과 안전을 함께 높이는 포장을 네 가지 방향에서 연구합니다.", en: "Four directions toward packaging that keeps food fresh and safe." },
+  patentTitle: { ko: "특허", en: "Patents" },
+  awardsTitle: { ko: "수상", en: "Awards & honors" },
+  peopleTitle: { ko: "구성원", en: "Lab members" },
+  admitted: { ko: "입학", en: "Joined" }, graduated: { ko: "학위 취득", en: "Degree" }, workplace: { ko: "근무처", en: "Current position" },
+  yearTbd: { ko: "[예시] 20XX", en: "[Example] 20XX" },
+  researchTbd: { ko: "[예시] 연구 분야를 한두 줄로 소개합니다.", en: "[Example] One or two lines about the research topic." },
+  workTbd: { ko: "[예시] 근무처", en: "[Example] Company or institution" },
+  scholarTbd: { ko: "[예시] Google Scholar", en: "[Example] Google Scholar" },
+  noMembers: { ko: "아직 등록된 구성원이 없습니다.", en: "No members listed yet." },
+  metricsNote: { ko: "Pure(Scopus) 기준, 2026년 11월", en: "Source: Pure (Scopus), November 2026" },
+  pubTitle: { ko: "연구성과 (2022–2026)", en: "Publications (2022–2026)" }, searchPh: { ko: "제목, 저자, 저널 검색 (전체 연도)", en: "Search title, author, journal (all years)" },
+  pubCount: { ko: "{n}편", en: "{n} publications" },
+  noPubs: { ko: "검색 결과가 없습니다.", en: "No matching publications." },
+  pubMore: { ko: "2021년 이전 연구성과를 포함한 전체 목록 보기 (Kyung Hee Pure) ↗", en: "Full list including earlier work on Kyung Hee Pure ↗" },
+  fAll: { ko: "전체", en: "All" },
+  newsTitle: { ko: "연구실 소식", en: "Lab news" },
+  tagAward: { ko: "수상", en: "Award" }, tagLab: { ko: "연구실", en: "Lab" }, tagMedia: { ko: "언론", en: "Media" }, tagStory: { ko: "학생 이야기", en: "Student story" },
+  galleryTitle: { ko: "갤러리", en: "Gallery" },
+  gallerySub: { ko: "연구실의 실험, 학회, 행사 사진을 모았습니다. 사진을 누르면 크게 볼 수 있습니다.", en: "Photos from our lab work, conferences and events. Select a photo to enlarge it." },
+  gAll: { ko: "전체", en: "All" }, gLab: { ko: "연구실", en: "Lab" }, gEvent: { ko: "학회·행사", en: "Conferences & events" }, gMedia: { ko: "언론·인터뷰", en: "Media" },
+  featSrc: { ko: "경희대 웹진 · 2026.07.10", en: "Kyung Hee Webzine · Jul 10, 2026" },
+  featTitle: { ko: "지속가능한 식품 포장의 해법을 찾다", en: "Finding solutions for sustainable food packaging" },
+  featSub: { ko: "2025 경희 Fellow(연구) 인터뷰 · 김준태 교수", en: "2025 Kyung Hee Fellow (Research) interview · Prof. Jun Tae Kim" },
+  featSum: { ko: "김준태 교수가 2025년 경희 Fellow(연구)로 선정되어 인터뷰를 했습니다. 활성 포장, 지능형 포장, 바이오플라스틱 기반 친환경 포장의 세 갈래 연구와, 세포독성·용출시험으로 소재 안전성을 먼저 검증하는 원칙을 소개했습니다. 재료공학·화학 전공 연구진과의 협업, 그리고 상용화와 탄소중립형 소재 개발이라는 다음 목표도 담겼습니다.",
+             en: "Prof. Kim was named a 2025 Kyung Hee Fellow (Research). In the interview he describes the lab's three research directions, active, intelligent and bioplastic-based eco-friendly packaging, and its principle of verifying material safety first through cytotoxicity and migration testing. He also discusses collaboration with researchers from materials engineering and chemistry, and the next goals of commercialization and carbon-neutral materials." },
+  featStats: [
+    { v: "69", k: { ko: "최근 3년 4개월간 SCIE 논문", en: "SCIE papers in the last 3 years 4 months" } },
+    { v: "68.4%", k: { ko: "주저자 논문 중 JCR 상위 10% 저널 게재 비율", en: "Lead-author papers in top-10% JCR journals" } },
+    { v: "30–40%", k: { ko: "실험실 수준 신선도 유지 기간 연장 효과", en: "Longer freshness retention in lab tests" } }
+  ],
+  featLink: { ko: "기사 전문 보기 ↗", en: "Read the full article (Korean) ↗" },
+  featAlt: { ko: "인터뷰 중인 김준태 교수", en: "Prof. Jun Tae Kim during the interview" },
+  joinTitle: { ko: "함께 연구할 사람을 찾습니다", en: "Join our lab" },
+  joinLead: { ko: "식품 포장, 소재, 데이터 분석에 관심 있는 석사·박사과정 학생과 학부 연구생을 모집합니다.",
+              en: "We welcome M.S. and Ph.D. students and undergraduate researchers interested in food packaging, materials and data analysis." },
+  address: { ko: "서울특별시 동대문구 경희대로 26<br>경희대학교 구 이과대학 서관(산학협력단) 410호",
+             en: "Room 410, Former College of Science West Building<br>(Industry-Academic Cooperation Foundation)<br>Kyung Hee University, 26 Kyungheedae-ro, Dongdaemun-gu, Seoul" },
+  map: { ko: "지도에서 보기 ↗", en: "View map ↗" },
+  directions: { ko: "지하철 1호선 회기역에서 버스 또는 도보 약 15분", en: "About 15 minutes on foot or by bus from Hoegi Station (Line 1)" },
+  copyright: { ko: "© 2026 경희대학교 식품가공·포장 연구실", en: "© 2026 Food Processing & Packaging Lab, Kyung Hee University" },
+  updated: { ko: "최종 수정 2026.11", en: "Last updated Nov 2026" },
+  facts: [
+    [{ ko: "소속", en: "Department" }, { ko: "경희대학교 식품영양학과", en: "Food and Nutrition, Kyung Hee University" }],
+    [{ ko: "지도교수", en: "PI" }, { ko: "김준태 교수", en: "Prof. Jun Tae Kim" }],
+    [{ ko: "연구 분야", en: "Field" }, { ko: "식품가공 및 포장", en: "Food processing and packaging" }],
+    [{ ko: "위치", en: "Location" }, { ko: "구 이과대학 서관 410호", en: "Room 410, Former College of Science West Bldg." }]
+  ]
+};
+
+const LAB = {
+  // 연구 분야: art는 아래 ART 그림 이름
+  areas: [
+    { art: "active", en: "Active Packaging",
+      title: { ko: "활성 포장", en: "Active packaging" },
+      text: { ko: "포장 필름에 탄소양자점(carbon dots), 금속-유기 골격체(MOF), 천연 추출물을 넣어 포장이 스스로 식품을 지키도록 만듭니다. 미생물 증식과 산화를 억제하고, 자외선을 막고, 과일을 빨리 익게 하는 에틸렌 가스를 흡착해 식품을 더 오래 신선하게 유지합니다.",
+              en: "We add carbon dots, metal-organic frameworks (MOFs) and natural extracts to packaging films so the package itself protects the food. The films suppress microbial growth and oxidation, block UV light and capture ethylene, the gas that speeds up ripening, keeping food fresh for longer." },
+      tags: ["Carbon dots", "MOF", "Antimicrobial", "Antioxidant", "UV-blocking", "Ethylene capture"],
+      deep: {
+        bg: { ko: "식품의 품질은 미생물 증식, 지질 산화, 자외선에 의한 광산화, 그리고 과일·채소가 내뿜는 에틸렌에 의한 과숙으로 떨어집니다. 기존 포장은 식품을 외부와 갈라놓는 수동적인 역할에 그치지만, 활성 포장은 포장재가 식품과 그 주변 공기에 직접 작용해 이런 품질 저하 요인을 줄입니다.",
+              en: "Food quality declines through microbial growth, lipid oxidation, UV-driven photo-oxidation and the ethylene that fruits and vegetables release as they ripen. Conventional packaging only separates food from its surroundings; active packaging lets the material act on the food and the air around it to slow these processes." },
+        method: { ko: "젤라틴, 카라기난, 키토산, 셀룰로오스 나노섬유, 카복시메틸셀룰로오스(CMC) 같은 생체고분자 필름에 기능성 나노소재를 복합화합니다. 망고·가지·자몽 껍질과 고추 부산물 등에서 수열합성한 탄소양자점은 항균·항산화·자외선 차단 기능을, 아연·철·티타늄·구리·비스무트 기반 금속-유기 골격체(MOF)는 항균 기능과 에틸렌 흡착·광촉매 분해 기능을 더합니다. 필름의 기계적·차단·광학 특성을 평가한 뒤 과일과 닭고기 등 실제 식품에 적용해 저장성 향상을 확인합니다.",
+                  en: "We combine functional nanomaterials with biopolymer films such as gelatin, carrageenan, chitosan, cellulose nanofibers and carboxymethyl cellulose (CMC). Carbon dots made hydrothermally from mango, eggplant and grapefruit peels and red pepper waste add antimicrobial, antioxidant and UV-blocking functions, while zinc-, iron-, titanium-, copper- and bismuth-based metal-organic frameworks (MOFs) add antimicrobial activity and ethylene adsorption or photocatalytic breakdown. After measuring the films' mechanical, barrier and optical properties, we test them on real foods such as fruit and chicken to confirm longer shelf life." },
+        case: { ko: "젤라틴 필름에 아연 기반 MOF인 ZIF-8을 넣어 항산화·자외선 흡수·항균 기능을 갖춘 활성 포장 필름을 만들었습니다. ZIF-8은 젤라틴 안에 고르게 분산되어 치밀한 필름을 이루었고, 내수성, 열안정성, 인장강도, 자외선 차단성이 함께 향상되었습니다. ZIF-8을 1 wt%와 3 wt% 넣은 필름의 항산화 활성은 각각 84.4%와 100%였고, 그람양성균과 그람음성균을 모두 억제했습니다. 3 wt% 필름으로 포장한 방울토마토는 10 °C에서 16일 동안 조직 연화가 늦춰지고 미생물이 증식하지 않았습니다.",
+                en: "We added ZIF-8, a zinc-based MOF, to gelatin to make an active film with antioxidant, UV-absorbing and antibacterial functions. ZIF-8 dispersed evenly into a dense film, improving water resistance, thermal stability, tensile strength and UV shielding. Films with 1 wt% and 3 wt% ZIF-8 showed 84.4% and 100% antioxidant activity and inhibited both Gram-positive and Gram-negative bacteria. Cherry tomatoes packed in the 3 wt% film kept their texture longer and showed no microbial growth over 16 days at 10 °C." }
+      },
+      // 대표 논문: fig에 그래픽 초록 이미지를 넣으면 표시됩니다
+      paper: { authors: "Riahi, Z., Hong, S. J., Rhim, J. W., Shin, G. H. & Kim, J. T.*", year: 2023,
+               title: "High-performance multifunctional gelatin-based films engineered with metal-organic frameworks for active food packaging applications",
+               journal: "Food Hydrocolloids", ref: "144, 108984", doi: "10.1016/j.foodhyd.2023.108984", impact: "11.0", fig: "active",
+               figCap: { ko: "일반 젤라틴 필름(왼쪽)과 Gel/Zn-MOF 3% 필름(오른쪽)으로 포장한 방울토마토의 10 °C 저장 중 외관 변화 (논문 Fig. 8)", en: "Cherry tomatoes packed in neat gelatin film (left) and Gel/Zn-MOF 3% film (right) during storage at 10 °C (Fig. 8 of the paper)" } }
+    },
+    { art: "intel", en: "Intelligent Packaging",
+      title: { ko: "지능형 포장", en: "Intelligent packaging" },
+      text: { ko: "포장 안 식품의 상태를 색으로 알려주는 센서를 개발합니다. 김치가 익으면서 늘어나는 이산화탄소와 산도, 육류·수산물이 상할 때 나오는 아민 가스에 반응해 라벨 색이 바뀌므로, 포장을 열지 않고도 숙성도와 신선도를 알 수 있습니다.",
+              en: "We develop sensors that show the condition of packaged food through color. Labels respond to the CO₂ and acidity that build up as kimchi ferments, and to amine gases released as meat and seafood spoil, so ripeness and freshness can be read without opening the package." },
+      tags: ["Kimchi ripeness", "Color indicator", "Fluorescent sensor", "Spoilage amines"],
+      deep: {
+        bg: { ko: "날짜로 표시되는 유통기한은 실제 보관 온도와 이력을 반영하지 못합니다. 특히 김치처럼 유통 중에도 발효가 계속되는 식품은 이산화탄소가 쌓이고 산도가 높아지면서 숙성도가 계속 바뀌지만, 소비자는 포장을 열기 전까지 이를 알기 어렵습니다. 지능형 포장은 이런 변화를 감지해 눈으로 볼 수 있는 신호로 바꿔줍니다.",
+              en: "A printed date cannot reflect how a product was actually stored. Foods such as kimchi keep fermenting during distribution, building up CO₂ and acidity, so their ripeness keeps changing, yet consumers cannot tell until they open the package. Intelligent packaging detects these changes and turns them into a visible signal." },
+        method: { ko: "아로니아, 장미 꽃잎, 콜라비 껍질 등에서 얻은 안토시아닌 같은 pH 감응 천연색소, 질소·황·인을 도핑한 탄소양자점, 색이 변하는 MOF를 한천·카라기난·셀룰로오스 나노섬유 필름이나 종이에 담아 지시계를 만듭니다. pH 완충액과 암모니아·아세트산 증기에 대한 색 반응, 색차(ΔE), 안정성을 평가한 뒤 김치, 닭고기, 수산물 포장에 적용해 실제 숙성·부패 단계와 색 변화를 맞춰봅니다.",
+                  en: "We load pH-responsive natural pigments such as anthocyanins from aronia, rose petals and kohlrabi peel, nitrogen-, sulfur- and phosphorus-doped carbon dots, and color-changing MOFs into agar, carrageenan or cellulose nanofiber films and paper. We measure their color response to pH buffers and to ammonia and acetic acid vapors, the color difference (ΔE) and stability, then apply them to kimchi, chicken and seafood packages to match color changes to actual ripening and spoilage stages." },
+        case: { ko: "아로니아 추출물 분말을 한천, κ-카라기난, 셀룰로오스 나노섬유(CNF)에 각각 넣어 김치 숙성도를 보여주는 색 지시계 필름을 만들었습니다. 세 필름 모두 자외선을 차단하고 가시광 투과를 약 99% 줄였으며, pH 변화와 암모니아·아세트산 증기에 민감하게 반응했습니다(암모니아에는 카라기난 필름이 가장 크게 반응). 인장강도는 CNF 필름에서 24.2% 높아졌고, 모든 필름이 ABTS 라디칼을 약 99%, DPPH 라디칼을 약 80% 소거했습니다. 김치 포장에 적용했을 때 알칼리 처리한 한천 필름이 초기, 적숙, 과숙 단계를 가장 뚜렷한 색 변화로 구분했습니다.",
+                en: "We added aronia extract powder to agar, κ-carrageenan and cellulose nanofiber (CNF) to make color indicator films for kimchi. All three films blocked UV light, cut visible-light transmittance by about 99%, and responded sensitively to pH and to ammonia and acetic acid vapors (the carrageenan film reacted most strongly to ammonia). Tensile strength rose by 24.2% in the CNF film, and all films scavenged about 99% of ABTS and about 80% of DPPH radicals. On kimchi packages, the alkalized agar film showed the clearest color shifts from fresh to optimally fermented to over-fermented." }
+      },
+      paper: { authors: "Oun, A. A., Roy, S., Hong, S. J., Shin, G. H., Yoo, S. R.* & Kim, J. T.*", year: 2024,
+               title: "Development of smart colorimetric indicators for tracking kimchi freshness by loading aronia extract in agar, κ-carrageenan, and cellulose nanofiber films",
+               journal: "International Journal of Biological Macromolecules", ref: "270, 132343", doi: "10.1016/j.ijbiomac.2024.132343", impact: "8.5", fig: "intel",
+               figCap: { ko: "아로니아 지시계 필름(원래 필름·알칼리 처리 필름)을 붙인 김치 용기의 숙성 단계별 색 변화 (논문 Fig. 8A)", en: "Aronia indicator films (original and alkalized) on kimchi containers at each ripening stage (Fig. 8A of the paper)" } }
+    },
+    { art: "eco", en: "Eco-friendly Packaging Materials",
+      title: { ko: "친환경 포장 소재", en: "Eco-friendly packaging materials" },
+      text: { ko: "농산물 부산물에서 나노셀룰로오스와 탄소양자점을 얻어 바이오 복합 필름을 만들고, 생분해성 고분자와 재활용이 쉬운 단일재질 포장을 개발합니다. 진주층처럼 판상 입자를 겹겹이 쌓은 구조로 수분·산소 차단성도 높입니다.",
+              en: "We turn crop by-products into nanocellulose and carbon dots for bio-composite films, and develop biodegradable polymers and easy-to-recycle mono-material packaging. Nacre-like layered structures raise the barrier to moisture and oxygen." },
+      tags: ["Crop by-products", "Biodegradable", "Mono-material", "Nacre-inspired barrier"],
+      deep: {
+        bg: { ko: "석유계 플라스틱 포장은 가볍고 값싸지만 자연에서 거의 분해되지 않아 큰 환경 부담을 남깁니다. 셀룰로오스와 다당류 같은 생체고분자는 생분해되는 대안이지만, 물에 약하고 수분·산소 차단성과 기계적 강도가 부족해 그대로는 실제 포장에 쓰기 어렵습니다.",
+              en: "Petroleum-based plastic packaging is light and cheap but barely breaks down in nature, leaving a heavy environmental burden. Biopolymers such as cellulose and other polysaccharides biodegrade, but they are sensitive to water and lack the moisture and oxygen barrier and the strength that real packaging needs." },
+        method: { ko: "농산물 부산물과 식품 가공 잔여물에서 셀룰로오스 나노섬유, 재생 셀룰로오스, 탄소양자점을 얻어 버리는 부분 없이 포장 소재로 활용합니다. 여기에 층상이중수산화물(LDH)이나 흑연질 질화탄소(g-C₃N₄) 같은 판상 나노시트를 넣어, 진주층처럼 단단한 판(벽돌)과 고분자(모르타르)가 겹겹이 쌓인 구조를 만듭니다. 수증기와 산소가 이 층을 돌아서 지나가야 하므로 차단성이 높아지고, 판과 고분자 사이의 결합으로 강도도 함께 높아집니다.",
+                  en: "We extract cellulose nanofibers, regenerated cellulose and carbon dots from crop by-products and food-processing residues so that nothing goes to waste. We then add plate-like nanosheets such as layered double hydroxides (LDH) or graphitic carbon nitride (g-C₃N₄) to build nacre-like structures, with rigid plates as bricks and polymer as mortar. Water vapor and oxygen must take a winding path through these layers, which raises the barrier, while bonding between plates and polymer adds strength." },
+        case: { ko: "박리한 층상이중수산화물(E-LDH)을 카복시메틸셀룰로오스(CMC)에 넣고, 시트르산으로 화학적 가교를, 캐모마일 꽃에서 수열합성한 탄소양자점으로 물리적 가교를 더해 진주층을 닮은 벽돌-모르타르 구조의 필름을 만들었습니다. 에스터 결합과 수소결합이 함께 작용해 치밀한 구조가 형성되었고, 인장강도는 52.2% 높아지고 투습도와 산소 투과도는 각각 65.2%, 80.0% 줄었습니다. 필름은 ABTS 라디칼을 100% 소거하고, UV-A를 84.7%, UV-B를 97.4% 차단했으며, 살모넬라와 리스테리아의 생장을 억제했습니다. 이 필름으로 포장한 포도는 16일 동안 단단함이 유지되고 무게 감소와 미생물 증식이 줄었습니다.",
+                en: "We embedded exfoliated layered double hydroxide (E-LDH) in carboxymethyl cellulose (CMC), then crosslinked it chemically with citric acid and physically with carbon dots made hydrothermally from chamomile flowers, forming a nacre-like brick-and-mortar film. Ester and hydrogen bonds together created a dense network: tensile strength rose by 52.2%, while water vapor permeability and oxygen transmittance fell by 65.2% and 80.0%. The film scavenged 100% of ABTS radicals, blocked 84.7% of UV-A and 97.4% of UV-B, and inhibited S. enterica and L. monocytogenes. Grapes packed in it stayed firm for 16 days with less weight loss and microbial growth." }
+      },
+      paper: { authors: "Riahi, Z., Khan, A., Priyadarshi, R., Rhim, J. W.*, Shin, G. H. & Kim, J. T.*", year: 2026,
+               title: "Dual-crosslinked nacre-inspired CMC/layered double hydroxide films with improved mechanical and barrier performance for fruit preservation",
+               journal: "Chemical Engineering Journal", ref: "533, 174602", doi: "10.1016/j.cej.2026.174602", impact: "13.2", fig: "eco",
+               figCap: { ko: "탄소양자점과 박리된 LDH 나노시트의 합성, 그리고 이중 가교된 진주층 모방 CMC/E-LDH/CA/CD 필름 제조 모식도 (논문 Fig. 1)", en: "Synthesis of carbon dots and exfoliated LDH sheets, and fabrication of the dual-crosslinked, nacre-inspired CMC/E-LDH/CA/CD film (Fig. 1 of the paper)" } }
+    },
+    { art: "safety", en: "Packaging Safety",
+      title: { ko: "식품용 기구·용기포장 안전관리", en: "Safety of food contact materials" },
+      text: { ko: "포장재나 용기 속 물질이 식품으로 옮겨가는지(이행) 시험하고 분석해, 식품용 기구·용기·포장이 안전 기준을 지키는지 검증합니다. 국내 시험 기준과 가이드라인 개선에도 참여합니다.",
+              en: "We test and analyze whether substances move from packaging and containers into food (migration), verifying that food utensils, containers and packaging meet safety standards. We also help improve Korea's test methods and guidelines." },
+      tags: ["Migration testing", "Food simulants", "Safety assessment", "Regulation"],
+      deep: {
+        bg: { ko: "포장재와 용기에는 첨가제, 잔류 단량체, 금속 같은 물질이 들어 있고, 이 중 일부는 식품과 닿는 동안 식품으로 옮겨갈(이행) 수 있습니다. 새로운 바이오 소재와 나노소재가 포장에 쓰이면서, 이들이 안전 기준을 지키는지 확인하는 시험법과 나라별 규격을 이해하는 일이 더 중요해지고 있습니다.",
+              en: "Packaging materials and containers contain additives, residual monomers and metals, some of which can move into food on contact (migration). As new bio-based materials and nanomaterials enter packaging, test methods that confirm they meet safety limits, and an understanding of each country's rules, matter more than ever." },
+        method: { ko: "식품의약품안전처 「기구 및 용기·포장의 기준 및 규격」에 따라 물, 4% 초산, 20%·50% 에탄올, n-헵탄 같은 식품 유사용매로 이행 시험을 하고, 이행된 물질을 기기 분석으로 정량해 기준치와 비교합니다. 식약처 연구과제를 통해 침출용매와 용출시험법 같은 국내 시험 기준의 개선 연구에도 참여하고 있으며, 바이오플라스틱과 나노소재의 국내외 규격·인증 체계도 분석합니다.",
+                  en: "Following Korea's Standards and Specifications for Utensils, Containers and Packages set by the Ministry of Food and Drug Safety (MFDS), we run migration tests with food simulants such as water, 4% acetic acid, 20% and 50% ethanol and n-heptane, quantify migrated substances by instrumental analysis and compare them with legal limits. Through MFDS research projects we also help improve national test methods, including extraction solvents and migration testing, and we analyze domestic and international standards and certification for bioplastics and nanomaterials." },
+        case: { ko: "바이오플라스틱의 정의와 세계 시장, 주요 원료·종류·특성을 정리하고, 폐기물 관리와 회수 방법, 주요 표준과 인증, 나라별 규제와 제한 사항을 함께 분석한 종합 리뷰입니다. 바이오플라스틱이 석유계 플라스틱을 대체하려면 소재 특성과 규제 요건을 함께 이해하는 것이 산업화와 상용화에 중요하다는 점을 짚고, 남은 과제와 향후 방향을 제시했습니다.",
+                en: "This review covers the terminology, global market, main sources, types and properties of bioplastics, along with waste management and recovery options, the key standards and certifications, and country-specific regulations and restrictions. It argues that understanding both material properties and regulatory requirements is essential for bioplastics to be industrialized, commercialized and adopted in place of petroleum-based plastics, and it outlines remaining challenges and future directions." }
+      },
+      paper: { authors: "Jayakumar, A., Radoor, S., Siengchin, S., Shin, G. H. & Kim, J. T.*", year: 2023,
+               title: "Recent progress of bioplastics in their properties, standards, certifications and regulations: A review",
+               journal: "Science of the Total Environment", ref: "878, 163156", doi: "10.1016/j.scitotenv.2023.163156", impact: "8.0", fig: "safety",
+               figCap: { ko: "논문의 그래픽 초록: 재생 자원에서 바이오플라스틱 생산, 사용, 폐기, 자연 순환으로 이어지는 흐름과 세계 시장 규모(2021년 242만 톤 → 2026년 759만 톤 전망)", en: "Graphical abstract: the cycle from renewable resources to bioplastic production, use, disposal and back, with global market size (2.42 million tonnes in 2021 to a projected 7.59 million in 2026)" } }
+    }
+  ],
+  // 특허 (교수님 자료로 교체 예정)
+  patents: [
+    { year: "2020", status: { ko: "등록", en: "Registered" }, no: "10-2020-0100903", title: { ko: "미세섬유화 셀룰로오스와 구아검을 포함하는 3D 바이오프린팅용 바이오잉크 및 3D 프린팅 방법", en: "Bio-ink containing microfibrillated cellulose and guar gum for 3D bioprinting, and 3D printing method" } },
+    { year: "2017", status: { ko: "등록", en: "Registered" }, no: "10-2017-0092714", title: { ko: "강황을 함유한 나노지질운반체 및 그 제조방법", en: "Nanolipid carrier containing turmeric and its manufacturing method" } },
+    { year: "2014", status: { ko: "만료", en: "Expired" }, no: "10-2014-0062958", title: { ko: "천연물 초임계 추출물을 함유한 개미 기피제 조성물", en: "Ant-repellent composition containing supercritical extracts of natural products" } }
+  ],
+  professor: {
+    name: { ko: "김준태", en: "Jun Tae Kim" }, sub: { ko: "Jun Tae Kim, Ph.D.", en: "김준태" },
+    role: { ko: "교수 · 연구책임자", en: "Professor · Principal Investigator" },
+    bio: { ko: "식품가공 및 포장을 전공하며, 활성·지능형 포장과 친환경 포장 소재, 포장재 안전성 평가 연구를 이끌고 있습니다.",
+           en: "Specializes in food processing and packaging, leading research on active and intelligent packaging, eco-friendly packaging materials and packaging safety assessment." },
+    scholar: "",   // Google Scholar 주소를 넣으면 링크가 생깁니다
+    info: [
+      [{ ko: "전공", en: "Field" }, { ko: "식품가공 및 포장", en: "Food processing and packaging" }],
+      [{ ko: "학위", en: "Degree" }, { ko: "이학박사 (식품과학), Rutgers, The State University of New Jersey", en: "Ph.D. in Food Science, Rutgers, The State University of New Jersey" }],
+      [{ ko: "연구실", en: "Office" }, { ko: "교수회관 308호", en: "Faculty Hall, Room 308" }],
+      [{ ko: "전화", en: "Phone" }, { ko: "02-961-9408", en: "+82-2-961-9408" }],
+      [{ ko: "이메일", en: "Email" }, { ko: "jtkim92@khu.ac.kr", en: "jtkim92@khu.ac.kr" }],
+      [{ ko: "연구 프로필", en: "Profile" }, { ko: "Kyung Hee Pure ↗", en: "Kyung Hee Pure ↗" }, "https://khu.elsevierpure.com/en/persons/jun-tae-kim/"]
+    ],
+    metrics: [
+      { v: "201", k: { ko: "연구성과", en: "Research outputs" } },
+      { v: "8,429", k: { ko: "피인용 수", en: "Citations" } },
+      { v: "56", k: { ko: "h-index", en: "h-index" } }
+    ],
+    awards: [
+      { year: "2025", text: { ko: "경희 Fellow(연구) 선정 · 경희대학교", en: "Kyung Hee Fellow (Research) · Kyung Hee University" } },
+      { year: "2025", text: { ko: "World's Top 2% Scientists (Single-year) 선정 · Elsevier, Stanford University", en: "World's Top 2% Scientists (single-year) · Elsevier and Stanford University" } },
+      { year: "2023", text: { ko: "식품의약품안전처 연구개발사업 우수성과 장려상", en: "Excellence Award (Encouragement), R&D Program of the Ministry of Food and Drug Safety" } }
+    ]
+  },
+  /* 구성원
+     group: researcher(연구교수·박사후연구원) / phd(석박사통합과정) / ms(석사과정) / alumni(졸업생)
+     year: 재학생은 입학년도, 졸업생은 학위 취득년도 · research: 학생 연구 분야 소개 · workplace: 졸업생 근무처
+     scholar: Google Scholar 주소 · 빈칸("")이면 [예시] 표시가 나옵니다 */
+  members: [
+    { group: "researcher", name: { ko: "Dr. Zohreh Riahi", en: "Dr. Zohreh Riahi" }, initials: "ZR", pos: { ko: "연구교수", en: "Research Professor" },
+      interest: { ko: "재료공학 · 금속-유기 골격체(MOF) 기반 활성 포장", en: "Materials engineering · MOF-based active packaging" }, scholar: "https://scholar.google.com/citations?user=tWNO-TgAAAAJ&hl=en" },
+    { group: "researcher", name: { ko: "Dr. Sasikumar Thangarasu", en: "Dr. Sasikumar Thangarasu" }, initials: "ST", photo: "sasi", pos: { ko: "연구교수", en: "Research Professor" },
+      interest: { ko: "화학 · 형광 센서 기반 지능형 포장", en: "Chemistry · Fluorescent sensor-based intelligent packaging" }, scholar: "https://scholar.google.com/citations?user=mkSgon0AAAAJ&hl=en" },
+    { group: "researcher", name: { ko: "Dr. Arul Murugesan", en: "Dr. Arul Murugesan" }, initials: "AM", photo: "arul", pos: { ko: "박사후연구원", en: "Postdoctoral Researcher" },
+      interest: { ko: "유기화학 · 식품안전 · 재료화학", en: "Organic chemistry · Food safety · Materials chemistry" }, scholar: "https://scholar.google.com/citations?user=l6wg9GkAAAAJ&hl=en" },
+
+    { group: "phd", name: { ko: "안효진", en: "Hyojin An" }, initials: "HA", photo: "hyojin", pos: { ko: "석박사통합과정", en: "Integrated M.S./Ph.D. student" }, year: "", research: "", scholar: "" },
+    { group: "phd", name: { ko: "장재호", en: "Jaeho Jang" }, initials: "JJ", photo: "jaeho", pos: { ko: "석박사통합과정", en: "Integrated M.S./Ph.D. student" }, year: "", research: "", scholar: "" },
+
+    { group: "ms", name: { ko: "조영수", en: "Youngsu Cho" }, initials: "YC", photo: "youngsu", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+    { group: "ms", name: { ko: "이유진", en: "Yujin Lee" }, initials: "YL", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+    { group: "ms", name: { ko: "나수빈", en: "Subin Na" }, initials: "SN", photo: "subin", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+    { group: "ms", name: { ko: "오윤지", en: "Yunji Oh" }, initials: "YO", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+    { group: "ms", name: { ko: "이아영", en: "Ayoung Lee" }, initials: "AL", photo: "ayoung", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+    { group: "ms", name: { ko: "윤승연", en: "Seungyeon Yoon" }, initials: "SY", pos: { ko: "석사과정", en: "M.S. student" }, year: "", research: "", scholar: "" },
+
+    { group: "alumni", name: { ko: "홍수정", en: "Sujeong Hong" }, initials: "SH", pos: { ko: "박사 졸업", en: "Ph.D. graduate" }, year: "", workplace: "", scholar: "" },
+    { group: "alumni", name: { ko: "하성룡", en: "Seongryong Ha" }, initials: "SH", pos: { ko: "석사 졸업", en: "M.S. graduate" }, year: "", workplace: "", scholar: "" },
+    { group: "alumni", name: { ko: "이진규", en: "Jingyu Lee" }, initials: "JL", pos: { ko: "석사 졸업", en: "M.S. graduate" }, year: "", workplace: "", scholar: "" },
+    { group: "alumni", name: { ko: "황지효", en: "Jihyo Hwang" }, initials: "JH", pos: { ko: "석사 졸업", en: "M.S. graduate" }, year: "", workplace: "", scholar: "" },
+    { group: "alumni", name: { ko: "이정훈", en: "Junghoon Lee" }, initials: "JL", pos: { ko: "석사 졸업", en: "M.S. graduate" }, year: "", workplace: "", scholar: "" }
+  ],
+  publications: [{"year": 2026, "type": "Article", "title": "Bilayer films comprising chitosan-gelatin blend film loaded with turmeric peel-derived carbon dot and polylactic acid film as active packaging for refrigerated Asian hard clams", "authors": "Ponnusamy, A., Palamae, S., Prodpran, T., Kim, J. T., Zhang, B., Ma, L., Fu, Y. & Benjakul, S.", "source": "Journal of Agriculture and Food Research. 26, 102632", "doi": "10.1016/j.jafr.2026.102632"},
+    {"year": 2026, "type": "Article", "title": "Cellulose nanofiber-based active packaging film enhanced with carbon dots and hydrochar derived from nettle", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "International Journal of Biological Macromolecules. 350, 150956", "doi": "10.1016/j.ijbiomac.2026.150956"},
+    {"year": 2026, "type": "Review", "title": "Chicken spoilage mechanism and monitoring its quality during storage using intelligent films: A review", "authors": "Remisha Jahan, K. T., Roy, S. & Kim, J. T.", "source": "Food Control. 187, 112152", "doi": "10.1016/j.foodcont.2026.112152"},
+    {"year": 2026, "type": "Article", "title": "Development of intelligent and active bioresource-derived polymeric films incorporated with anthocyanins and carbon dots from dried Bengal currant for real-time freshness assessment of shark meat", "authors": "Nagarajan, M., Benjakul, S., Govindhasami, E., Murugan, G., Kim, J. T. & Rhim, J.-W.", "source": "Bioresource Technology Reports. 35, 102855", "doi": "10.1016/j.biteb.2026.102855"},
+    {"year": 2026, "type": "Article", "title": "Dual-crosslinked nacre-inspired CMC/layered double hydroxide films with improved mechanical and barrier performance for fruit preservation", "authors": "Riahi, Z., Khan, A., Priyadarshi, R., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "Chemical Engineering Journal. 533, 174602", "doi": "10.1016/j.cej.2026.174602"},
+    {"year": 2026, "type": "Article", "title": "Dual-mode antibacterial and UV-blocking properties of poly(vinyl alcohol)/carrageenan-based composite films incorporated with metal glycerate complex", "authors": "Sasikumar, T., Riahi, Z., Packialakshmi, J. S., Hong, S. J., Hwang, J., An, H. J., Shin, G. H., Han, S., Lee, S. G. & Kim, J. T.", "source": "Surfaces and Interfaces. 95, 109647", "doi": "10.1016/j.surfin.2026.109647"},
+    {"year": 2026, "type": "Article", "title": "Endogenous Carbon Dots in Traditional Korean Beverages: Structural Characterization, Antioxidant Activity, and Biocompatibility", "authors": "Kim, G., Khan, A., Priyadarshi, R., Han, S., Lee, S. G., Kim, J. T. & Rhim, J. W.", "source": "Beverages. 12, 6, 65", "doi": "10.3390/beverages12060065"},
+    {"year": 2026, "type": "Article", "title": "High-pressure processing combined with chitooligosaccharide-catechin conjugate enhances quality and shelf-life of precooked crab meat", "authors": "Pimsannil, K., Palamae, S., Fu, Y., Zhang, B., Kim, J. T., Huda, N. & Benjakul, S.", "source": "Food Bioscience. 77, 108346", "doi": "10.1016/j.fbio.2026.108346"},
+    {"year": 2026, "type": "Article", "title": "Impact of cellulose nanofibrils in biopolymer based-oleogels designed for curcumin encapsulation and 3D-printed food applications", "authors": "Lee, S. R., Chuesiang, P., Bang, S. R., Kim, J. T. & Shin, G. H.", "source": "International Journal of Biological Macromolecules. 377, 153675", "doi": "10.1016/j.ijbiomac.2026.153675"},
+    {"year": 2026, "type": "Article", "title": "L-cysteine modified carbon dots from Duea ching (Ficus botryocarpa Miq.) fruit: A multifunctional nanomaterial in active chitosan/gelatin films for enhancing the shelf life of Asian seabass slices", "authors": "Likhar, V., Ponnusamy, A., Singh, A., Zhang, B., Yin, T., Kim, J. T. & Benjakul, S.", "source": "Food Hydrocolloids. 172, 112110", "doi": "10.1016/j.foodhyd.2025.112110"},
+    {"year": 2026, "type": "Review", "title": "Nanomaterials for active and intelligent food packaging: Shelf-life extension, real-time sensing, and security applications", "authors": "Sasikumar, T., Khan, A., Ezati, P., Kim, J. T. & Rhim, J.-W.", "source": "Food Chemistry. 513, 149059", "doi": "10.1016/j.foodchem.2026.149059"},
+    {"year": 2026, "type": "Article", "title": "Photocatalytic ethylene scavenging by chitosan/gelatin packaging films loaded with TiO2-functionalized bismuth metal organic frameworks for postharvest preservation of fruits", "authors": "Riahi, Z., Khan, A., Hong, S. J., Rhim, J. W., Shin, G. H., Min, S. C., Han, S., Lee, S. G. & Kim, J. T.", "source": "Food Chemistry. 499, 147380", "doi": "10.1016/j.foodchem.2025.147380"},
+    {"year": 2026, "type": "Article", "title": "Polyaniline and Carbon Dot-Based Multifunctional Packaging Films for Active and Intelligent Fish Packaging", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "Food Biophysics. 21, 1, 7", "doi": "10.1007/s11483-025-10096-3"},
+    {"year": 2026, "type": "Article", "title": "Preparation of antibacterial adsorbent pads utilizing bacterial cellulose functionalized with Thymus vulgaris based carbon dots for preserving chicken meat", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "Food Bioscience. 82, 109419", "doi": "10.1016/j.fbio.2026.109419"},
+    {"year": 2026, "type": "Review", "title": "Recent advances in food preservation through antimicrobial carbon dots-based food packaging: Environmental sustainability and future trends", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "Microbial Pathogenesis. 211, 108271", "doi": "10.1016/j.micpath.2025.108271"},
+    {"year": 2026, "type": "Review", "title": "Recent advances in the application of two-dimensional nanomaterials for postharvest quality control and safety monitoring of fruits and vegetables", "authors": "Riahi, Z., Khan, A., Priyadarshi, R., Shin, G. H., Rhim, J. W. & Kim, J. T.", "source": "Advances in Colloid and Interface Science. 357, 104009", "doi": "10.1016/j.cis.2026.104009"},
+    {"year": 2026, "type": "Article", "title": "Single and combined emerging preservation technologies affect quality and microbiota of refrigerated Pacific white shrimp", "authors": "Ahmad, A. S., Palamae, S., Zhang, B., Kim, J. T., Hong, H. & Benjakul, S.", "source": "Food Control. 188, 112254", "doi": "10.1016/j.foodcont.2026.112254"},
+    {"year": 2026, "type": "Article", "title": "Synergistic Effects of Epigallocatechin Gallate-Ascorbic Acid and Inert-Gas Modified Atmosphere Packaging on Color Restoration in Pre-Discolored Longtail Tuna Slices", "authors": "Palanisamy, S., Singh, A., Zhang, B., Kim, J. T. & Benjakul, S.", "source": "Food and Bioprocess Technology. 19, 6, 276", "doi": "10.1007/s11947-026-04363-5"},
+    {"year": 2026, "type": "Article", "title": "Synthesis and Characterization of Carbon Dots from Guava Leaves (Psidium guajava L.): UV Blocking, Antioxidant and Antimicrobial Functions", "authors": "Murugan, G., Nilsuwan, K., Kim, J. T., Rhim, J. W., Zhang, B., Yin, T. & Benjakul, S.", "source": "Waste and Biomass Valorization. 17, 2, p. 717-730", "doi": "10.1007/s12649-025-03117-2"},
+    {"year": 2026, "type": "Article", "title": "Valorization of carbon dots from cashew (Anacardium occidentale) and jik (Barringtonia acutangula) leaves: Multifunctional preservatives for extending shelf life of precooked baby clam meat", "authors": "Murugan, G., Bisht, A., Nilsuwan, K., Kim, J. T., Rhim, J. W., Fu, Y., Zhang, B. & Benjakul, S.", "source": "LWT - Food Science and Technology. 250, 119477", "doi": "10.1016/j.lwt.2026.119477"},
+    {"year": 2026, "type": "Article", "title": "Water-resistant CMC/g-C3N4 based multifunctional film for high-humidity fruit packaging", "authors": "Khan, A., Riahi, Z., Priyadarshi, R., Kim, J. T. & Rhim, J. W.", "source": "International Journal of Biological Macromolecules. 355, 151518", "doi": "10.1016/j.ijbiomac.2026.151518"},
+    {"year": 2025, "type": "Article", "title": "Acetylated Epigallocatechin Gallate and Ascorbyl Palmitate: Comparative Study on Antioxidant Activity and Retardation of Lipid Oxidation in Fish Mince and Shrimp Oil", "authors": "Rajasekaran, B., Pan, M. H., Buamard, N., Zhang, B., Kim, J. T. & Benjakul, S.", "source": "Journal of Food Science. 90, 10, e70598", "doi": "10.1111/1750-3841.70598"},
+    {"year": 2025, "type": "Article", "title": "Active packaging film based on chitosan/gelatin blend incorporated with mango peel carbon dots: Properties and shelf life extension of minced pork", "authors": "Ponnusamy, A., Khan, A., Prodpran, T., Kim, J. T., Benjakul, S. & Rhim, J.-W.", "source": "International Journal of Biological Macromolecules. 288, 138692", "doi": "10.1016/j.ijbiomac.2024.138692"},
+    {"year": 2025, "type": "Article", "title": "Active packaging film utilizing cerium metal-organic frameworks doped with titanium dioxide as ethylene scavengers for postharvest ripening control of avocados", "authors": "Hong, S. J., Riahi, Z., Khan, A., Lee, J. G., Kim, B. Y., Min, S. C., Shin, G. H. & Kim, J. T.", "source": "Food Chemistry. 489, 145025", "doi": "10.1016/j.foodchem.2025.145025"},
+    {"year": 2025, "type": "Article", "title": "Adsorptive removal of crystal violet from aqueous solution by bioadsorbent", "authors": "Radoor, S., Jayakumar, A., Shivanna, J. M., Karayil, J., Kim, J. T. & Siengchin, S.", "source": "Biomass Conversion and Biorefinery. 15, 2, p. 2431-2442", "doi": "10.1007/s13399-023-05079-8"},
+    {"year": 2025, "type": "Review", "title": "Advancements in metal–organic frameworks impregnated biopolymer-based smart packaging applications: Prospects and future direction", "authors": "Hong, S. J., Riahi, Z., Khan, A., Shin, G. H. & Kim, J. T.", "source": "Microchemical Journal. 209, 112816", "doi": "10.1016/j.microc.2025.112816"},
+    {"year": 2025, "type": "Book chapter", "title": "Antimicrobial Mechanisms Exhibited by Carbon Quantum Dots", "authors": "Packialakshmi, J. S. & Kim, J. T.", "source": "Carbon Quantum Dots from Natural Sources: Properties, Development, and Emerging Applications. CRC Press, p. 100-115", "doi": "10.1201/9781003437857-6"},
+    {"year": 2025, "type": "Book chapter", "title": "Antioxidant Properties and UV-blocking of Carbon Quantum Dots in Food Packaging Applications", "authors": "Riahi, Z., Kaviani, A., Khan, A., Pircheraghi, G. & Kim, J. T.", "source": "Carbon Quantum Dots from Natural Sources: Properties, Development, and Emerging Applications. CRC Press, p. 119-139", "doi": "10.1201/9781003437857-8"},
+    {"year": 2025, "type": "Book chapter", "title": "Application of carbon dots in 3D food printing", "authors": "Riahi, Z., Kim, Y. H., Khan, A., Kaviani, A., Ebrahimi, M., Kim, J. T. & Rhim, J. W.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 531-555", "doi": "10.1016/b978-0-443-43940-7.00014-3"},
+    {"year": 2025, "type": "Article", "title": "A Short Review on Greenwashing: General Terms, Certifying Organizations and Emerging Technologies", "authors": "Kim, J. T.", "source": "한국포장학회지 (Korean Journal of Packaging Science & Technology), 31", "doi": "10.20909/kopast.2025.31.1.43"},
+    {"year": 2025, "type": "Article", "title": "Bambara Groundnut Pericarp–Derived Carbon Dots: Reinforcement of Gelatin/PLA Bilayer Films and Their Function as Preservative in Packed Asian Seabass Slices", "authors": "Murugan, G., Nilsuwan, K., Kim, J. T., Rhim, J. W., Yin, T., Zhang, B. & Benjakul, S.", "source": "Journal of Food Science. 90, 8, e70469", "doi": "10.1111/1750-3841.70469"},
+    {"year": 2025, "type": "Review", "title": "Carbon dot-based pH-responsive indicators for intelligent food packaging and food safety control", "authors": "Riahi, Z., Khan, A., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Trends in Food Science and Technology. 163, 105200", "doi": "10.1016/j.tifs.2025.105200"},
+    {"year": 2025, "type": "Book chapter", "title": "Carbon dot-based pH-responsive sensors for real-time detection of food quality", "authors": "Riahi, Z., Khan, A., Kim, J. T. & Rhim, J.-W.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 397-418", "doi": "10.1016/b978-0-443-43940-7.00008-8"},
+    {"year": 2025, "type": "Article", "title": "Carbon Dots from Dried German Chamomile Flower and Its Residual Biomass: Characteristics, Bioactivities, Cytotoxicity and Its Preservative Effect on the Refrigerated Precooked Baby Clam (Paphia undulata)", "authors": "Bora, B., Palamae, S., Zhang, B., Yin, T., Kim, J. T., Rhim, J. W. & Benjakul, S.", "source": "Foods. 14, 17, 3130", "doi": "10.3390/foods14173130"},
+    {"year": 2025, "type": "Article", "title": "Carbon dots-functionalized polyaniline incorporated into sodium alginate/cellulose nanofibrils film for sustainable intelligent and active packaging of shrimp", "authors": "Riahi, Z., Khan, A., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Sustainable Materials and Technologies. 43, e01217", "doi": "10.1016/j.susmat.2024.e01217"},
+    {"year": 2025, "type": "Book", "title": "Carbon Quantum Dots from Natural Sources: Properties, Development, and Emerging Applications", "authors": "Jayakumar, A., Radoor, S., Kim, J. T. & Parameswaranpillai, J.", "source": "CRC Press", "doi": "10.1201/9781003437857"},
+    {"year": 2025, "type": "Article", "title": "Cellulose-Based Pickering Emulsion-Templated Edible Oleofoam: A Novel Approach to Healthier Solid-Fat Replacers", "authors": "Lee, S. M., Hong, S. J., Shin, G. H. & Kim, J. T.", "source": "Gels. 11, 6, 403", "doi": "10.3390/gels11060403"},
+    {"year": 2025, "type": "Article", "title": "Cellulose nanofiber/gelatin-based multifunctional ethylene scavenging active packaging films integrated with TiO2-functionalized Bi(III) metal-organic frameworks", "authors": "Khan, A., Riahi, Z., Hong, S. J., Kim, J. T., Rhim, J.-W. & Min, S. C.", "source": "Food Packaging and Shelf Life. 51, 101596", "doi": "10.1016/j.fpsl.2025.101596"},
+    {"year": 2025, "type": "Article", "title": "Chitosan/Polyvinyl Alcohol Based Blend Film Containing Tangerine Peel Carbon Dots: Properties, Antioxidant and Antibacterial Activities", "authors": "Murugan, G., Khan, A., Nilsuwan, K., Kim, J. T., Benjakul, S. & Rhim, J.-W.", "source": "Waste and Biomass Valorization. 16, 5, p. 2255-2270", "doi": "10.1007/s12649-024-02799-4"},
+    {"year": 2025, "type": "Article", "title": "Chitosan-based active packaging film incorporated with TiO2/N co-doped carbon dots to extend the shelf life of bread", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "Colloids and Surfaces A: Physicochemical and Engineering Aspects. 727, 138179", "doi": "10.1016/j.colsurfa.2025.138179"},
+    {"year": 2025, "type": "Article", "title": "Comparison of Flavor Stability of Yuja (Citrus junos Tanaka) Oil-Based Nano-Carriers and Dried Gels", "authors": "Jung, S. A., Chuesiang, P., Kim, J. T. & Shin, G. H.", "source": "Gels. 11, 9, 751", "doi": "10.3390/gels11090751"},
+    {"year": 2025, "type": "Article", "title": "Effect of Silane Surface Treatments on the Interfacial Shear Strength Between Cotton Yarn and Poly(Lactic Acid) Resin", "authors": "Kim, G. H., Cho, Y. S., Shin, G. H. & Kim, J. T.", "source": "Materials. 18, 19, 4582", "doi": "10.3390/ma18194582"},
+    {"year": 2025, "type": "Article", "title": "Effects of polyphenols in combination with L-cysteine/L-ascorbic acid: Myoglobin redox state, color and quality of refrigerated longtail tuna (Thunnus tonggol) slices", "authors": "Palanisamy, S., Singh, A., Zhang, B., Kim, J. T. & Benjakul, S.", "source": "Food Chemistry. 465, 141983", "doi": "10.1016/j.foodchem.2024.141983"},
+    {"year": 2025, "type": "Article", "title": "Epigallocatechin gallate and L-ascorbic acid in conjunction with modified atmospheric packaging preserve color and quality of refrigerated longtail tuna (Thunnus tonggol) slices", "authors": "Palanisamy, S., Singh, A., Zhang, B., Rhim, J. W., Kim, J. T., Fu, Y. & Benjakul, S.", "source": "Food Chemistry: X. 29, 102683", "doi": "10.1016/j.fochx.2025.102683"},
+    {"year": 2025, "type": "Review", "title": "Exploring Sustainable Carbon Dots as UV-Blocking Agents for Food Preservation", "authors": "Riahi, Z., Khan, A., Ebrahimi, M., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "Comprehensive Reviews in Food Science and Food Safety. 24, 3, e70192", "doi": "10.1111/1541-4337.70192"},
+    {"year": 2025, "type": "Article", "title": "Fabrication of a Chitosan–Gelatin/Polylactic Acid Bilayer Active Film Loaded with Tannic Acid for Enhancing Shelf-Life of Refrigerated Baby Clams", "authors": "Ponnusamy, A., Palamae, S., Prodpran, T., Kim, J. T., Zhang, B., Ma, L. & Benjakul, S.", "source": "Foods. 14, 22, 3934", "doi": "10.3390/foods14223934"},
+    {"year": 2025, "type": "Article", "title": "Formulation of poly(butylene adipate-co-terephthalate)/caffeic acid composites for vegetable packaging applications", "authors": "Sana, S. S., Riahi, Z., Mishra, V., Kim, J. T., Vadde, R., Brandão, P., Kim, S. C. & Fonte, P.", "source": "Reactive and Functional Polymers. 216, 106413", "doi": "10.1016/j.reactfunctpolym.2025.106413"},
+    {"year": 2025, "type": "Book chapter", "title": "Global regulatory aspects of carbon dot applications in the food industry", "authors": "Riahi, Z., Khan, A. & Kim, J. T.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 575-585", "doi": "10.1016/b978-0-443-43940-7.00020-9"},
+    {"year": 2025, "type": "Review", "title": "Health and safety aspects of carbon dots and their sustainable applications in food packaging and preservation", "authors": "Khan, A., Riahi, Z., Zhang, W., Priyadarshi, R., Kumar, J. V., Rhim, J.-W., Kim, J. T., Chang, Y. H. & Benjakul, S.", "source": "Sustainable Materials and Technologies. 45, e01589", "doi": "10.1016/j.susmat.2025.e01589"},
+    {"year": 2025, "type": "Article", "title": "Innovative dual-ligand approach for designing Zn-MOFs nanostructures for carrageenan-based active and intelligent packaging of fresh-cut fruits", "authors": "Riahi, Z., Khan, A., Hong, S. J., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Food Chemistry. 492, 145360", "doi": "10.1016/j.foodchem.2025.145360"},
+    {"year": 2025, "type": "Article", "title": "N, S, and P-doped carbon dots for intelligent paper sensors: Vapor-phase biogenic amine detection and freshness evaluation of foods", "authors": "Sasikumar, T., Shin, G. H. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 52, 101647", "doi": "10.1016/j.fpsl.2025.101647"},
+    {"year": 2025, "type": "Article", "title": "Natural polysaccharide-derived carbon dots from ginger, galangal, and turmeric rhizome peels: Spectral and functional properties, and cytotoxicity assessment", "authors": "Ponnusamy, A., Buatong, J., Prodpran, T., Kim, J. T., Rhim, J.-W. & Benjakul, S.", "source": "International Journal of Biological Macromolecules. 321, 146132", "doi": "10.1016/j.ijbiomac.2025.146132"},
+    {"year": 2025, "type": "Article", "title": "Physicochemical properties, in vitro digestion and absorption of bio calcium powders derived from Asian seabass gills as affected by bleaching treatment", "authors": "Patil, U., Saetang, J., Zhang, B., Kim, J. T. & Benjakul, S.", "source": "Food Chemistry. 497, 147080", "doi": "10.1016/j.foodchem.2025.147080"},
+    {"year": 2025, "type": "Article", "title": "Poly(vinyl alcohol)-based multifunctional smart packaging films with carbon dots-loaded metal-organic frameworks for freshness indicator and shelf-life extension of shrimp", "authors": "Hong, S. J., Riahi, Z., Shin, G. H. & Kim, J. T.", "source": "Progress in Organic Coatings. 198, 108899", "doi": "10.1016/j.porgcoat.2024.108899"},
+    {"year": 2025, "type": "Review", "title": "Polyhydroxyalkanoates for sustainable food packaging: A comprehensive review on production, applications, and end-of-life scenarios for food packaging", "authors": "Hong, S. J., Ahn, K., Kim, J. T. & Kim, Y. T.", "source": "Trends in Food Science and Technology. 165, 105294", "doi": "10.1016/j.tifs.2025.105294"},
+    {"year": 2025, "type": "Book chapter", "title": "Preparation and application of hydrophobic carbon dots", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 209-228", "doi": "10.1016/b978-0-443-43940-7.00015-5"},
+    {"year": 2025, "type": "Article", "title": "Quality changes, diversity and virulence of Aeromonas spp. in the refrigerated Meretrix meretrix and Paphia undulata clams", "authors": "Palamae, S., Saetang, J., Yingkajorn, M., Zhao, Y., Zhang, B., Kim, J. T. & Benjakul, S.", "source": "LWT - Food Science and Technology. 228, 118046", "doi": "10.1016/j.lwt.2025.118046"},
+    {"year": 2025, "type": "Article", "title": "Red pepper waste-derived carbon dots incorporated sodium alginate/gelatin composite films for bioactive fruit preservation", "authors": "Riahi, Z., Khan, A., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 308, 142622", "doi": "10.1016/j.ijbiomac.2025.142622"},
+    {"year": 2025, "type": "Book chapter", "title": "Surface modification of carbon dots for food packaging applications", "authors": "Thangarasu, S., Kim, J. T. & Rhim, J.-W.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 229-246", "doi": "10.1016/b978-0-443-43940-7.00003-9"},
+    {"year": 2025, "type": "Article", "title": "Synergistic enhancement of PLA/PHA bio-based films using tempo-oxidized cellulose nanofibers, graphene oxide, and clove oil for sustainable packaging", "authors": "Mazaheri, M., Kim, J. T. & Shin, G. H.", "source": "Materials Today Communications. 42, 111531", "doi": "10.1016/j.mtcomm.2025.111531"},
+    {"year": 2025, "type": "Article", "title": "Tangerine peel-derived nitrogen-doped carbon dots incorporated chitosan/pullulan-based active packaging film for bread packaging", "authors": "Sul, Y., Khan, A., Kim, J. T. & Rhim, J. W.", "source": "Colloids and Surfaces B: Biointerfaces. 245, 114339", "doi": "10.1016/j.colsurfb.2024.114339"},
+    {"year": 2025, "type": "Article", "title": "Use of dual ligands for functional Zn-MOF fabrication for fruit quality monitoring and freshness maintenance", "authors": "Khan, A., Riahi, Z., Hong, S. J., Kim, J. T. & Rhim, J.-W.", "source": "Food Packaging and Shelf Life. 49, 101483", "doi": "10.1016/j.fpsl.2025.101483"},
+    {"year": 2025, "type": "Book chapter", "title": "UV-barrier properties of carbon dots for food packaging applications", "authors": "Riahi, Z., Khan, A., Ebrahimi, M., Rhim, J.-W. & Kim, J. T.", "source": "Carbon Dots in Food Packaging and Preservation. Elsevier, p. 189-208", "doi": "10.1016/b978-0-443-43940-7.00029-5"},
+    {"year": 2025, "type": "Article", "title": "Yellow-emitting carbon dots as 'off-on' fluorescence probes in paper-based micro kit for selective detection of silver ions and kanamycin in animal-derived food", "authors": "Sasikumar, T., Kumar, J. V., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Journal of Environmental Chemical Engineering. 13, 5, 117706", "doi": "10.1016/j.jece.2025.117706"},
+    {"year": 2025, "type": "Article", "title": "Zero-waste development of sustainable carrageenan-based active packaging films by utilizing hydrothermally synthesized carbon dots and byproduct hydrochar", "authors": "Riahi, Z., Khan, A., Lee, J. H., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 52, 101665", "doi": "10.1016/j.fpsl.2025.101665"},
+    {"year": 2024, "type": "Article", "title": "Active Fish Gelatin/Chitosan Blend Film Incorporated with Guava Leaf Powder Carbon Dots: Properties, Release and Antioxidant Activity", "authors": "Murugan, G., Nilsuwan, K., Prodpran, T., Ponnusamy, A., Rhim, J. W., Kim, J. T. & Benjakul, S.", "source": "Gels. 10, 4, 281", "doi": "10.3390/gels10040281"},
+    {"year": 2024, "type": "Review", "title": "Advances and prospects for biochar utilization in food processing and packaging applications", "authors": "Bhattacharya, T., Khan, A., Ghosh, T., Kim, J. T. & Rhim, J. W.", "source": "Sustainable Materials and Technologies. 39, e00831", "doi": "10.1016/j.susmat.2024.e00831"},
+    {"year": 2024, "type": "Review", "title": "Advances in strawberry postharvest preservation and packaging: A comprehensive review", "authors": "Priyadarshi, R., Jayakumar, A., de Souza, C. K., Rhim, J. W. & Kim, J. T.", "source": "Comprehensive Reviews in Food Science and Food Safety. 23, 4, e13417", "doi": "10.1111/1541-4337.13417"},
+    {"year": 2024, "type": "Article", "title": "A versatile smart packaging film functionalized with zinc/curcumin-based metal-organic frameworks for maintaining and monitoring peach (Prunus persica) freshness", "authors": "Hong, S. J., Khan, A., Riahi, Z., Shin, G. H. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 46, 101408", "doi": "10.1016/j.fpsl.2024.101408"},
+    {"year": 2024, "type": "Article", "title": "Bilayer Polylactic Acid and Chitosan/Gelatin Film Containing Epigallocatechin Gallate Prepared through Solvent Casting and Electrospinning: Properties, Bioactivities and Release Kinetics", "authors": "Ponnusamy, A., Rajasekaran, B., Tagrida, M., Prodpran, T., Kim, J. T. & Benjakul, S.", "source": "Journal of Polymers and the Environment. 32, 1, p. 260-276", "doi": "10.1007/s10924-023-02998-5"},
+    {"year": 2024, "type": "Book chapter", "title": "Bionanomaterials in Removing organic Dyes from Water", "authors": "Radoor, S., Bemplassery, A., Jayakumar, A., Karayil, J., Kim, J. T. & Siengchin, S.", "source": "Bionanomaterials for Industrial Applications. CRC Press, p. 370-385", "doi": "10.1201/9781003432791-25"},
+    {"year": 2024, "type": "Article", "title": "Carboxymethyl cellulose/gelatin film incorporated with eggplant peel waste-derived carbon dots for active fruit packaging applications", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J.-W.", "source": "International Journal of Biological Macromolecules. 271, 132715", "doi": "10.1016/j.ijbiomac.2024.132715"},
+    {"year": 2024, "type": "Article", "title": "Carrageenan-based active and intelligent packaging films integrated with anthocyanin and TiO2-doped carbon dots derived from sweet potato peels", "authors": "Riahi, Z., Khan, A., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 259, 129371", "doi": "10.1016/j.ijbiomac.2024.129371"},
+    {"year": 2024, "type": "Article", "title": "Carrageenan-based functional films hybridized with carbon dots and anthocyanins from rose petals for smart food packaging applications", "authors": "Wagh, R. V., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "International Journal of Biological Macromolecules. 272, 132817", "doi": "10.1016/j.ijbiomac.2024.132817"},
+    {"year": 2024, "type": "Article", "title": "Carrageenan-based multifunctional packaging films containing Zn-carbon dots/anthocyanin derived from Kohlrabi peel for monitoring quality and extending the shelf life of shrimps", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "Food Chemistry. 432, 137215", "doi": "10.1016/j.foodchem.2023.137215"},
+    {"year": 2024, "type": "Article", "title": "Cellulose Extraction From Green Algae, Ulva Ohnoi, and Its Application to PVA-Based Antibacterial Composite Films Incorporated With Zinc Oxide Nanoparticles", "authors": "Lee, E. H., Kim, D. G., Hong, S. J., Kim, J. T. & Shin, G. H.", "source": "Packaging Technology and Science. 37, 6, p. 473-485", "doi": "10.1002/pts.2805"},
+    {"year": 2024, "type": "Article", "title": "Cellulose nanofiber-based multifunctional composite films integrated with zinc doped-grapefruit peel-based carbon quantum dots", "authors": "Hong, S. J., Ha, S. Y., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 267, 131397", "doi": "10.1016/j.ijbiomac.2024.131397"},
+    {"year": 2024, "type": "Article", "title": "Chitosan/gelatin-based multifunctional films integrated with sulfur-functionalized chitin for active packaging applications", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "Food Hydrocolloids. 149, 109537", "doi": "10.1016/j.foodhyd.2023.109537"},
+    {"year": 2024, "type": "Article", "title": "Development of innovative active packaging films using gelatin/pullulan-based composites incorporated with cinnamon essential oil-loaded metal-organic frameworks for meat preservation", "authors": "Hong, S. J., Riahi, Z., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 267, 131606", "doi": "10.1016/j.ijbiomac.2024.131606"},
+    {"year": 2024, "type": "Article", "title": "Development of smart colorimetric indicators for tracking kimchi freshness by loading aronia extract in agar, κ-carrageenan, and cellulose nanofiber films", "authors": "Oun, A. A., Roy, S., Hong, S. J., Shin, G. H., Yoo, S. R. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 270, 132343", "doi": "10.1016/j.ijbiomac.2024.132343"},
+    {"year": 2024, "type": "Article", "title": "Effect of carbon dot-doped Ti-MOF on CMC/Agar film and active packaging application on storage quality of fruits", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "Food Chemistry. 455, 139911", "doi": "10.1016/j.foodchem.2024.139911"},
+    {"year": 2024, "type": "Article", "title": "Fabrication and Application of Turmeric Extract-Incorporated Oleogels Structured with Xanthan Gum and Soy Lecithin by Emulsion Template", "authors": "Hong, S. J., Shin, G. H. & Kim, J. T.", "source": "Gels. 10, 1, 84", "doi": "10.3390/gels10010084"},
+    {"year": 2024, "type": "Article", "title": "Fabrication of nanoceria and metakaolin activated poly (butylene adipate-co-terephthalate)-based composite for active food packaging applications", "authors": "Hou, T., Sana, S. S., Riahi, Z., Kim, J. T., Bharathi, A., Kim, S. C. & Roy, S.", "source": "Food Bioscience. 61, 104900", "doi": "10.1016/j.fbio.2024.104900"},
+    {"year": 2024, "type": "Article", "title": "Functional composite films incorporating triphala-derived carbon dots for extending chicken preservation", "authors": "Sasikumar, T., Packialakshmi, J. S., Hong, S. J., Ha, S. Y., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 280, 135856", "doi": "10.1016/j.ijbiomac.2024.135856"},
+    {"year": 2024, "type": "Article", "title": "Lemon peel-based fluorescent carbon quantum dots as a functional filler in polyvinyl alcohol-based films for active packaging applications", "authors": "Jayakumar, A., Radoor, S., Shin, G. H. & Kim, J. T.", "source": "Industrial Crops and Products. 209, 117968", "doi": "10.1016/j.indcrop.2023.117968"},
+    {"year": 2024, "type": "Book chapter", "title": "Marine based biopolymers for food packaging applications", "authors": "Radoor, S., Jayakumar, A., Karayil, J., Kim, J. T. & Siengchin, S.", "source": "Marine Biopolymers: Processing, Functionality and Applications. Elsevier, p. 883-902", "doi": "10.1016/b978-0-443-15606-9.00029-2"},
+    {"year": 2024, "type": "Article", "title": "Multifunctional green-emitting fluorescent carbon dots: A versatile fluorometric probe for glyphosate detection and applications in food", "authors": "Sasikumar, T., Packialakshmi, J. S., Hong, S. J., Ha, S. Y., Shin, G. H. & Kim, J. T.", "source": "Journal of Environmental Chemical Engineering. 12, 5, 113356", "doi": "10.1016/j.jece.2024.113356"},
+    {"year": 2024, "type": "Article", "title": "Multi-functional polysaccharides composite film containing cashew and jik leaf carbon dots: Properties and bioactivities", "authors": "Murugan, G., Khan, A., Nilsuwan, K., Kim, J. T., Benjakul, S. & Rhim, J. W.", "source": "Applied Food Research. 4, 2, 100590", "doi": "10.1016/j.afres.2024.100590"},
+    {"year": 2024, "type": "Book chapter", "title": "Nanotechnology in gas-scavenging additives", "authors": "Priyadarshi, R., Bagri, F., Riahi, Z., Rhim, J. W. & Kim, J. T.", "source": "Advancements in Nanotechnology for Food and Packaging. Elsevier, p. 447-473", "doi": "10.1016/b978-0-443-21428-8.00016-3"},
+    {"year": 2024, "type": "Article", "title": "Nelumbo nucifera flower extract incorporated alginate/polyvinyl alcohol films as a sustainable pH indicator for active food packaging applications", "authors": "Radoor, S., Jayakumar, A., Karayil, J., Kim, J. T. & Siengchin, S.", "source": "International Journal of Biological Macromolecules. 273, 133170", "doi": "10.1016/j.ijbiomac.2024.133170"},
+    {"year": 2024, "type": "Article", "title": "Preparation of transparent and flexible regenerated kenaf CNF composite films with curcumin-metal complex for food packaging applications", "authors": "Kumar, A., Packialakshmi, J. S., Kim, J. T. & Shin, G. H.", "source": "Food Packaging and Shelf Life. 45, 101327", "doi": "10.1016/j.fpsl.2024.101327"},
+    {"year": 2024, "type": "Article", "title": "Pseudomonas aeruginosa-derived carbon dots doped with sulfur as active packaging materials for fresh food preservation", "authors": "Hong, S. J., Riahi, Z., Shin, G. H. & Kim, J. T.", "source": "Food Bioscience. 57, 103506", "doi": "10.1016/j.fbio.2023.103506"},
+    {"year": 2024, "type": "Review", "title": "Recent advances in carboxymethyl cellulose-based active and intelligent packaging materials: A comprehensive review", "authors": "Ramakrishnan, R., Kim, J. T., Roy, S. & Jayakumar, A.", "source": "International Journal of Biological Macromolecules. 259, 129194", "doi": "10.1016/j.ijbiomac.2023.129194"},
+    {"year": 2024, "type": "Review", "title": "Recent advances in cellulose- and alginate-based hydrogels for water and wastewater treatment: A review", "authors": "Radoor, S., Karayil, J., Jayakumar, A., Kandel, D. R., Kim, J. T., Siengchin, S. & Lee, J.", "source": "Carbohydrate Polymers. 323, 121339", "doi": "10.1016/j.carbpol.2023.121339"},
+    {"year": 2024, "type": "Article", "title": "Red-emitting copper nanoclusters for ultrasensitive and selective detection of creatinine and its application in portable smartphone-based paper strips and polymer thin film", "authors": "Sasikumar, T., Shanmugaraj, K., Nandhini, K., Kim, J. T. & Ilanchelian, M.", "source": "Surfaces and Interfaces. 53, 105014", "doi": "10.1016/j.surfin.2024.105014"},
+    {"year": 2024, "type": "Article", "title": "Storage stability of Asian seabass oil-in-water Pickering emulsion packed in pouches made from electrospun and solvent casted bilayer films from poly lactic acid/chitosan-gelatin blend containing epigallocatechin gallate", "authors": "Ponnusamy, A., Niluswan, K., Prodpran, T., Kim, J. T., Rhim, J.-W. & Benjakul, S.", "source": "International Journal of Biological Macromolecules. 265, 130760", "doi": "10.1016/j.ijbiomac.2024.130760"},
+    {"year": 2024, "type": "Book chapter", "title": "Sustainable active food packaging", "authors": "Riahi, Z., Khan, A., Kim, J. T. & Shin, G. H.", "source": "Sustainable Materials for Food Packaging and Preservation: Food Security and Sustainability. Elsevier, p. 239-262", "doi": "10.1016/b978-0-443-13567-5.00011-3"},
+    {"year": 2024, "type": "Article", "title": "Sustainable chitosan/polyvinyl alcohol composite film integrated with sulfur-modified montmorillonite for active food packaging applications", "authors": "Riahi, Z., Khan, A., Shin, G. H., Rhim, J.-W. & Kim, J. T.", "source": "Progress in Organic Coatings. 192, 108474", "doi": "10.1016/j.porgcoat.2024.108474"},
+    {"year": 2024, "type": "Article", "title": "Sustainable packaging film based on cellulose nanofibres/pullulan impregnated with zinc-doped carbon dots derived from avocado peel to extend the shelf life of chicken and tofu", "authors": "Riahi, Z., Khan, A., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 258, 129302", "doi": "10.1016/j.ijbiomac.2024.129302"},
+    {"year": 2024, "type": "Article", "title": "Synergistic effect of iron-based metal-organic framework hybridized with carbon quantum dots in agar/gelatin films for fruit preservation", "authors": "Riahi, Z., Khan, A., Rhim, J.-W., Shin, G. H. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 45, 101330", "doi": "10.1016/j.fpsl.2024.101330"},
+    {"year": 2024, "type": "Article", "title": "Vitamin E-fortified emulsion-templated oleogels structured with xanthan gum and soybean lecithin and their application in pound cakes", "authors": "Hong, S. J., Shin, G. H. & Kim, J. T.", "source": "Food Bioscience. 57, 103505", "doi": "10.1016/j.fbio.2023.103505"},
+    {"year": 2023, "type": "Article", "title": "Active and intelligent packaging films based on PVA/Chitosan/Zinc oxide nanoparticles/Sweet purple potato extract as pH sensing and antibacterial wraps", "authors": "Jayakumar, A., Radoor, S., Shin, G. H., Siengchin, S. & Kim, J. T.", "source": "Food Bioscience. 56, 103432", "doi": "10.1016/j.fbio.2023.103432"},
+    {"year": 2023, "type": "Book chapter", "title": "Antimicrobial properties of nanocomposite films for food packaging applications", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Parameswaranpillai, J. & Siengchin, S.", "source": "Biocomposites for Industrial Applications: Construction, Biomedical, Transportation and Food Packaging. Elsevier, p. 405-423", "doi": "10.1016/b978-0-323-91866-4.00017-2"},
+    {"year": 2023, "type": "Review", "title": "Biocompatible carbon quantum dots for intelligent sensing in food safety applications: Opportunities and sustainability", "authors": "Khan, A., Ezati, P., Kim, J. T. & Rhim, J. W.", "source": "Materials Today Sustainability. 21, 100306", "doi": "10.1016/j.mtsust.2022.100306"},
+    {"year": 2023, "type": "Article", "title": "Biodegradable polymeric green adsorbent for the highly efficient removal of crystal violet dye from aqueous solution", "authors": "Radoor, S., Jayakumar, A., Karayil, J., Kim, J. T. & Siengchin, S.", "source": "Chemical Engineering Research and Design. 199, p. 473-485", "doi": "10.1016/j.cherd.2023.09.048"},
+    {"year": 2023, "type": "Review", "title": "Carbon Dots: Opportunities and Challenges in Cancer Therapy", "authors": "Bhattacharya, T., Shin, G. H. & Kim, J. T.", "source": "Pharmaceutics. 15, 3, 1019", "doi": "10.3390/pharmaceutics15031019"},
+    {"year": 2023, "type": "Article", "title": "Chitosan-based multifunctional coating combined with sulfur quantum dots to prevent Listeria contamination of enoki mushrooms", "authors": "Min, S., Priyadarshi, R., Ezati, P., Rhim, J.-W. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 35, 101014", "doi": "10.1016/j.fpsl.2022.101014"},
+    {"year": 2023, "type": "Book chapter", "title": "Cytotoxicity and biocompatibility of biobased materials", "authors": "Jayakumar, A., Radoor, S., Rhim, J. W., Parameswaranpillai, J., Siengchin, S. & Kim, J. T.", "source": "Advanced Applications of Biobased Materials: Food, Biomedical, and Environmental Applications. Elsevier, p. 533-547", "doi": "10.1007/978-981-19-6024-6_2"},
+    {"year": 2023, "type": "Article", "title": "Facile Synthesis of Multifunctional Carbon Dots from Spent Gromwell Roots and Their Application as Coating Agents", "authors": "Bhattacharya, T., Do, H. A., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "Foods. 12, 11, 2165", "doi": "10.3390/foods12112165"},
+    {"year": 2023, "type": "Article", "title": "Fully transparent and flexible antibacterial packaging films based on regenerated cellulose extracted from ginger pulp", "authors": "Saedi, S., Kim, J. T., Lee, E. H., Kumar, A. & Shin, G. H.", "source": "Industrial Crops and Products. 197, 116554", "doi": "10.1016/j.indcrop.2023.116554"},
+    {"year": 2023, "type": "Book chapter", "title": "Functionalized nanofiber for wound healing and wound dressing applications", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J. W., Parameswaranpillai, J. & Siengchin, S.", "source": "Functionalized Nanofibers: Synthesis and Industrial Applications. Elsevier, p. 253-276", "doi": "10.1016/b978-0-323-99461-3.00019-4"},
+    {"year": 2023, "type": "Article", "title": "Gelatin/carrageenan-based smart packaging film integrated with Cu-metal organic framework for freshness monitoring and shelf-life extension of shrimp", "authors": "Khan, A., Riahi, Z., Kim, J. T. & Rhim, J. W.", "source": "Food Hydrocolloids. 145, 109180", "doi": "10.1016/j.foodhyd.2023.109180"},
+    {"year": 2023, "type": "Article", "title": "Gelatin/poly(vinyl alcohol)-based dual functional composite films integrated with metal-organic frameworks and anthocyanin for active and intelligent food packaging", "authors": "Riahi, Z., Khan, A., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 249, 126040", "doi": "10.1016/j.ijbiomac.2023.126040"},
+    {"year": 2023, "type": "Article", "title": "Green seaweed (Ulva ohnoi) as a new eco-friendly source for preparing transparent and functional regenerated cellulose composite films", "authors": "Saedi, S., Kim, J. T., Shokri, M., Kim, J. H. & Shin, G. H.", "source": "Cellulose. 30, 5, p. 3041-3059", "doi": "10.1007/s10570-023-05055-5"},
+    {"year": 2023, "type": "Article", "title": "High-performance multifunctional gelatin-based films engineered with metal-organic frameworks for active food packaging applications", "authors": "Riahi, Z., Hong, S. J., Rhim, J. W., Shin, G. H. & Kim, J. T.", "source": "Food Hydrocolloids. 144, 108984", "doi": "10.1016/j.foodhyd.2023.108984"},
+    {"year": 2023, "type": "Article", "title": "Impact of Ethanolic Thai Indigenous Leaf Extracts on Melanosis Prevention and Shelf-Life Extension of Refrigerated Pacific White Shrimp", "authors": "Ahmad, A. S., Sae-leaw, T., Zhang, B., Singh, P., Kim, J. T. & Benjakul, S.", "source": "Foods. 12, 19, 3649", "doi": "10.3390/foods12193649"},
+    {"year": 2023, "type": "Review", "title": "Insights into the antibacterial and antiviral mechanisms of metal oxide nanoparticles used in food packaging", "authors": "Packialakshmi, J. S., Kang, J., Jayakumar, A., Park, S., Chang, Y. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 40, 101213", "doi": "10.1016/j.fpsl.2023.101213"},
+    {"year": 2023, "type": "Book chapter", "title": "Lightweight and sustainable materials—a global scenario", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J. W., Parameswaranpillai, J. & Siengchin, S.", "source": "Lightweight and Sustainable Composite Materials: Preparation, Properties and Applications. Elsevier, p. 1-18", "doi": "10.1016/b978-0-323-95189-0.00001-9"},
+    {"year": 2023, "type": "Book chapter", "title": "Lightweight and sustainable materials for food packaging applications", "authors": "Radoor, S., Shivanna, J. M., Baswaraj, S., Chowdhury, C. R., Jayakumar, A., Karayil, J., Kim, J. T., Lee, J. & Siengchin, S.", "source": "Lightweight and Sustainable Composite Materials: Preparation, Properties and Applications. Elsevier, p. 219-240", "doi": "10.1016/b978-0-323-95189-0.00010-x"},
+    {"year": 2023, "type": "Book chapter", "title": "Natural Fiber/Epoxy-Based Hybrid Composites: Thermal and Mechanical Properties", "authors": "Radoor, S., Bemplassery, A., Jayakumar, A., Karayil, J., Shivanna, J. M., Kim, J. T., Lee, J., Parameswaranpillai, J. & Siengchin, S.", "source": "Epoxy-Based Biocomposites. CRC Press, p. 177-190", "doi": "10.1201/9781003271017-9"},
+    {"year": 2023, "type": "Book chapter", "title": "Natural Fiber-Based Bionanocomposites: Thermal, Morphological and Mechanical Properties", "authors": "Jayakumar, A., Soman, R., Radoor, S., Parameswaranpillai, J., Kim, J. T., Rhim, J. W. & Siengchin, S.", "source": "Epoxy-Based Biocomposites. CRC Press, p. 191-209", "doi": "10.1201/9781003271017-10"},
+    {"year": 2023, "type": "Article", "title": "Observation of curcumin-encapsulated Pickering emulsion stabilized by cellulose nanocrystals-whey protein isolate (CNCs-WPI) complex under in vitro lipid digestion through INFOGEST model", "authors": "Chuesiang, P., Kim, J. T. & Shin, G. H.", "source": "International Journal of Biological Macromolecules. 234, 123679", "doi": "10.1016/j.ijbiomac.2023.123679"},
+    {"year": 2023, "type": "Article", "title": "pH-Responsive strips integrated with resazurin and carbon dots for monitoring shrimp freshness", "authors": "Ezati, P., Khan, A., Rhim, J. W., Kim, J. T. & Molaei, R.", "source": "Colloids and Surfaces B: Biointerfaces. 221, 113013", "doi": "10.1016/j.colsurfb.2022.113013"},
+    {"year": 2023, "type": "Article", "title": "pH-sensitive green tea-derived carbon quantum dots for real-time monitoring of shrimp freshness", "authors": "Khan, A., Ezati, P., Rhim, J. W., Kim, J. T. & Molaei, R.", "source": "Colloids and Surfaces A: Physicochemical and Engineering Aspects. 666, 131242", "doi": "10.1016/j.colsurfa.2023.131242"},
+    {"year": 2023, "type": "Article", "title": "pH-sensitive smart indicators based on cellulose and different natural pigments for tracing kimchi ripening stages", "authors": "Oun, A. A., Roy, S., Shin, G. H., Yoo, S. R. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 242, 124905", "doi": "10.1016/j.ijbiomac.2023.124905"},
+    {"year": 2023, "type": "Review", "title": "Recent advances in two-dimensional nanomaterials: properties, antimicrobial, and drug delivery application of nanocomposites", "authors": "Jayakumar, A., Mathew, S., Radoor, S., Kim, J. T., Rhim, J. W. & Siengchin, S.", "source": "Materials Today Chemistry. 30, 101492", "doi": "10.1016/j.mtchem.2023.101492"},
+    {"year": 2023, "type": "Review", "title": "Recent progress of bioplastics in their properties, standards, certifications and regulations: A review", "authors": "Jayakumar, A., Radoor, S., Siengchin, S., Shin, G. H. & Kim, J. T.", "source": "Science of the Total Environment. 878, 163156", "doi": "10.1016/j.scitotenv.2023.163156"},
+    {"year": 2023, "type": "Review", "title": "Sulfur recycling into value-added materials: a review", "authors": "Priyadarshi, R., Khan, A., Ezati, P., Tammina, S. K., Priyadarshi, S., Bhattacharya, T., Kim, J. T. & Rhim, J. W.", "source": "Environmental Chemistry Letters. 21, 3, p. 1673-1699", "doi": "10.1007/s10311-023-01575-5"},
+    {"year": 2023, "type": "Article", "title": "Trypsin from Pyloric Caeca of Asian Seabass: Purification, Characterization, and Its Use in the Hydrolysis of Acid-Soluble Collagen", "authors": "Patil, U., Baloch, K. A., Nile, S. H., Kim, J. T. & Benjakul, S.", "source": "Foods. 12, 15, 2937", "doi": "10.3390/foods12152937"},
+    {"year": 2022, "type": "Article", "title": "Antimicrobial, antioxidant, and pH-sensitive polyvinyl alcohol/chitosan-based composite films with aronia extract, cellulose nanocrystals, and grapefruit seed extract", "authors": "Oun, A. A., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 213, p. 381-393", "doi": "10.1016/j.ijbiomac.2022.05.180"},
+    {"year": 2022, "type": "Article", "title": "Comparative study of oregano essential oil encapsulated in halloysite nanotubes and diatomaceous earth as antimicrobial and antioxidant composites", "authors": "Oun, A. A., Bae, A. Y., Shin, G. H., Park, M. K. & Kim, J. T.", "source": "Applied Clay Science. 224, 106522", "doi": "10.1016/j.clay.2022.106522"},
+    {"year": 2022, "type": "Article", "title": "Comparison of physicochemical and functional properties of elemental sulfur, sulfur nanoparticles, and sulfur quantum dots for sustainable biological applications", "authors": "Priyadarshi, R., Riahi, Z., Rhim, J.-W. & Kim, J. T.", "source": "Materials Today Sustainability. 20, 100243", "doi": "10.1016/j.mtsust.2022.100243"},
+    {"year": 2022, "type": "Article", "title": "Comparison of physicochemical properties and flavor content of yuja (Citrus junos) powders prepared by different homogenization and drying methods", "authors": "Jung, S. A., Yoon, J. Y., Kim, J. T. & Shin, G. H.", "source": "Korean Journal of Food Preservation. 29, 1, p. 59-69", "doi": "10.11002/kjfp.2022.29.1.59"},
+    {"year": 2022, "type": "Article", "title": "Development of soy protein concentrate/hemp fiber-based biocomposite foams: Effects of alkaline treatment and poly(lactic acid) coating", "authors": "Kim, B. S., Garcia, C. V., Shin, G. H. & Kim, J. T.", "source": "Industrial Crops and Products. 186, 115288", "doi": "10.1016/j.indcrop.2022.115288"},
+    {"year": 2022, "type": "Article", "title": "Enhanced bioaccessibility and stability of iron through W/O/W double emulsion-based solid lipid nanoparticles and coating with water-soluble chitosan", "authors": "Hong, S. J., Garcia, C. V., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 209, p. 895-903", "doi": "10.1016/j.ijbiomac.2022.04.066"},
+    {"year": 2022, "type": "Article", "title": "Enhancement of Storage Stability and Masking Effect of Curcumin by Turmeric Extract-Loaded Nanoemulsion and Water-Soluble Chitosan Coating", "authors": "Lee, B. N., Hong, S. J., Yu, M. H., Shin, G. H. & Kim, J. T.", "source": "Pharmaceutics. 14, 8, 1547", "doi": "10.3390/pharmaceutics14081547"},
+    {"year": 2022, "type": "Book chapter", "title": "Lignin-based bionanocomposites for food packaging applications", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J. W., Parameswaranpillai, J. & Siengchin, S.", "source": "Bionanocomposites for Food Packaging Applications. Elsevier, p. 323-337", "doi": "10.1016/b978-0-323-88528-7.00025-3"},
+    {"year": 2022, "type": "Article", "title": "Multifunctional poly(vinyl alcohol) films using cellulose nanocrystals/oregano and cellulose nanocrystals/cinnamon Pickering emulsions: Effect of oil type and concentration", "authors": "Oun, A. A., Shin, G. H. & Kim, J. T.", "source": "International Journal of Biological Macromolecules. 194, p. 736-745", "doi": "10.1016/j.ijbiomac.2021.11.119"},
+    {"year": 2022, "type": "Article", "title": "Observation of curcumin-loaded hydroxypropyl methylcellulose (HPMC) oleogels under in vitro lipid digestion and in situ intestinal absorption in rats", "authors": "Chuesiang, P., Zhang, J., Choi, E., Yoon, I. S., Kim, J. T. & Shin, G. H.", "source": "International Journal of Biological Macromolecules. 208, p. 520-529", "doi": "10.1016/j.ijbiomac.2022.03.120"},
+    {"year": 2022, "type": "Article", "title": "Quality Evaluation of Corni Fructus Extract Fortified Functional Jelly", "authors": "Lee, J. Y., Baek, E. J., Hong, S. J. & Kim, J. T.", "source": "Food Engineering Progress. 26, 4, p. 234-239", "doi": "10.13050/foodengprog.2022.26.4.234"},
+    {"year": 2022, "type": "Review", "title": "Recent advances in polyvinyl alcohol-based composite films and their applications in food packaging", "authors": "Oun, A. A., Shin, G. H., Rhim, J. W. & Kim, J. T.", "source": "Food Packaging and Shelf Life. 34, 100991", "doi": "10.1016/j.fpsl.2022.100991"},
+    {"year": 2022, "type": "Review", "title": "Recent innovations in bionanocomposites-based food packaging films – A comprehensive review", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J. W., Nandi, D., Parameswaranpillai, J. & Siengchin, S.", "source": "Food Packaging and Shelf Life. 33, 100877", "doi": "10.1007/978-981-99-3516-1_115-1"},
+    {"year": 2022, "type": "Article", "title": "The role of nanostructured lipid carriers and type of biopolymers on the lipid digestion and release rate of curcumin from curcumin-loaded oleogels", "authors": "Zhang, J., Chuesiang, P., Kim, J. T. & Shin, G. H.", "source": "Food Chemistry. 392, 133306", "doi": "10.1016/j.foodchem.2022.133306"},
+    {"year": 2022, "type": "Article", "title": "Titanium dioxide nanoparticles and elderberry extract incorporated starch based polyvinyl alcohol films as active and intelligent food packaging wraps", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J. W., Parameswaranpillai, J., Nandi, D., Srisuk, R. & Siengchin, S.", "source": "Food Packaging and Shelf Life. 34, 100967", "doi": "10.1016/j.fpsl.2022.100967"},
+    {"year": 2022, "type": "Book chapter", "title": "Water Absorption Behavior of Bast Fibers Incorporated Polymer Composites", "authors": "Jayakumar, A., Radoor, S., Kim, J. T., Rhim, J.-W., Parameswaranpillai, J. & Siengchin, S.", "source": "Springer Series on Polymer and Composite Materials. Springer International Publishing, p. 167-182 16 p. (Springer Series on Polymer and Composite Materials; vol. Part F11522)", "doi": "10.1007/978-981-19-4866-4_9"}],
+  // 갤러리: 사진은 위에서부터 최신순. src에는 이미지 경로(예: "images/gallery/2026-05-conference.jpg")를 넣으면 됩니다.
+  // category: "lab"(연구실) / "event"(학회·행사) / "media"(언론·인터뷰)
+  gallery: [
+    { src: "GROUP_PHOTO", date: "2025", category: "lab", caption: { ko: "김준태 교수와 연구실 구성원들의 필름 시료 검토", en: "Prof. Kim and lab members reviewing film samples" } },
+    { src: "LAB_PHOTO", date: "2025", category: "lab", caption: { ko: "웰 플레이트로 시료를 확인하는 연구실 구성원들", en: "Lab members checking samples on a well plate" } },
+    { src: "PROF_FEATURE", date: "2026.07", category: "media", caption: { ko: "경희대 웹진 경희 Fellow(연구) 인터뷰", en: "Kyung Hee Webzine interview, Kyung Hee Fellow (Research)" } }
+  ],
+  // 소식: tag는 award(수상) / lab(연구실) / media(언론) / story(학생 이야기)
+  news: [
+    { date: "[예시] 2026", tag: "award", text: { ko: "[예시] 나수빈 석사과정, 3MT(Three Minute Thesis) 대회 수상", en: "[Example] M.S. student Subin Na wins an award at the 3MT (Three Minute Thesis) competition" } },
+    { date: "[예시] 2026", tag: "lab", text: { ko: "[예시] 연구실, '행복한 연구실' 선정", en: "[Example] Lab selected as a 'Happy Lab'" } },
+    { date: "[예시] 2026", tag: "award", text: { ko: "[예시] 박사후연구원, 학회 발표상 수상", en: "[Example] Postdoctoral researcher receives a conference presentation award" } },
+    { date: "2026.07", tag: "media", text: { ko: "경희대 웹진에 김준태 교수 경희 Fellow(연구) 인터뷰 게재", en: "Kyung Hee Webzine publishes an interview with Prof. Kim as a Kyung Hee Fellow (Research)" } },
+    { date: "2025", tag: "award", text: { ko: "김준태 교수, 2025 경희 Fellow(연구) 선정", en: "Prof. Kim named a 2025 Kyung Hee Fellow (Research)" } },
+    { date: "2025", tag: "award", text: { ko: "김준태 교수, World's Top 2% Scientists(Single-year) 선정", en: "Prof. Kim listed among the World's Top 2% Scientists (single-year)" } },
+    { date: "2023", tag: "award", text: { ko: "식품의약품안전처 연구개발사업 우수성과 장려상 수상", en: "Excellence Award (Encouragement) from the MFDS R&D Program" } }
+  ]
+};
+/* ===================================================================== */
+
+let lang = "en";
+// 페이지는 항상 영어로 시작합니다. KO 버튼으로 바꾼 언어는 그 페이지를 보는 동안만 유지됩니다.
+try { localStorage.removeItem("fpp-lang"); } catch (e) {}
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const L = v => (v && typeof v === "object" && "ko" in v) ? v[lang] : v;
+const mark = s => esc(L(s)).replace(/\[(예시|Example)\]/g, '<span class="ex">[$1]</span>');
+const markHTML = s => L(s).replace(/\[(예시|Example)\]/g, '<span class="ex">[$1]</span>');
+
+/* ===== 그림 도우미 ===== */
+const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}"${o.anchor ? ` text-anchor="${o.anchor}"` : ""} font-size="${o.size || 14}" font-weight="${o.weight || 500}" fill="${o.fill || "var(--ill-ink)"}">${esc(s)}</text>`;
+function arrow(x1, y1, x2, y2, c = "var(--ill-muted)", w = 2, dash = "") {
+  const a = Math.atan2(y2 - y1, x2 - x1), h = 9;
+  const p = s => [(x2 - h * Math.cos(a + s)).toFixed(1), (y2 - h * Math.sin(a + s)).toFixed(1)];
+  const [p1, p2] = [p(-0.45), p(0.45)];
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}" stroke-linecap="round"${dash ? ` stroke-dasharray="${dash}"` : ""}/>` +
+    `<path d="M${p1[0]} ${p1[1]} L${x2} ${y2} L${p2[0]} ${p2[1]}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+}
+const cdot = (x, y, r = 4.5) => `<circle cx="${x}" cy="${y}" r="${r * 2}" fill="#5CD3E0" opacity=".28"/><circle cx="${x}" cy="${y}" r="${r}" fill="#5CD3E0"/>`;
+const mof = (x, y, s = 18, c = "#F2B544") => `<g transform="translate(${x - s / 2} ${y - s / 2})"><rect width="${s}" height="${s}" rx="2" fill="none" stroke="${c}" stroke-width="2"/><path d="M${s / 3} 0 V${s} M${2 * s / 3} 0 V${s} M0 ${s / 3} H${s} M0 ${2 * s / 3} H${s}" stroke="${c}" stroke-width="1.2"/></g>`;
+const eth = (x, y) => `<g transform="translate(${x} ${y})"><line x1="-7" y1="-2" x2="7" y2="-2" stroke="var(--ill-muted)" stroke-width="2"/><line x1="-7" y1="2" x2="7" y2="2" stroke="var(--ill-muted)" stroke-width="2"/>` +
+  [[-15, -8], [-15, 8], [15, -8], [15, 8]].map(([a, b]) => `<line x1="${a > 0 ? 7 : -7}" y1="0" x2="${a}" y2="${b}" stroke="var(--ill-muted)" stroke-width="1.6"/><circle cx="${a}" cy="${b}" r="3.6" fill="var(--ill-card)" stroke="var(--ill-muted)" stroke-width="1.4"/>`).join("") +
+  `<circle cx="-7" cy="0" r="6" fill="#6B7280"/><circle cx="7" cy="0" r="6" fill="#6B7280"/></g>`;
+const bug = (x, y, rot) => `<g transform="translate(${x} ${y}) rotate(${rot})"><rect x="-14" y="-5.5" width="28" height="11" rx="5.5" fill="#6CC07F"/><path d="M14 0 q6 -4 10 0 t8 0" fill="none" stroke="#6CC07F" stroke-width="1.6"/>` +
+  `<path d="M-9 -9 L9 9 M9 -9 L-9 9" stroke="#D9534F" stroke-width="2.6" stroke-linecap="round"/></g>`;
+const svgOpen = (w, h, label) => `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">`;
+
+/* ===== 연구 분야 그림 (그래픽 초록) ===== */
+const ART = {
+  active() {
+    const t = {
+      title: { ko: "활성 포장: 탄소양자점과 MOF를 넣은 필름이 식품을 지키는 모습", en: "Active packaging: a film with carbon dots and MOFs protecting food" },
+      uv: { ko: "자외선 차단", en: "UV blocking" }, uvSub: { ko: "빛에 의한 변질 방지", en: "Prevents light damage" },
+      eth: { ko: "에틸렌 가스 흡착", en: "Ethylene capture" }, ethSub: { ko: "과일 숙성 지연", en: "Slows fruit ripening" },
+      film: { ko: "포장 필름", en: "Packaging film" },
+      rel: { ko: "항균·항산화 성분", en: "Antimicrobial & antioxidant" }, relSub: { ko: "식품 표면을 보호", en: "agents protect the food" },
+      bug: { ko: "미생물 증식 억제", en: "Stops microbial growth" },
+      lgC: { ko: "탄소양자점 (Carbon dots)", en: "Carbon dots" }, lgM: { ko: "금속-유기 골격체 (MOF)", en: "Metal-organic frameworks (MOF)" }
+    };
+    let s = svgOpen(640, 360, L(t.title));
+    s += `<circle cx="54" cy="52" r="20" fill="#F2B544"/>` + [0, 45, 90, 135, 180, 225, 270, 315].map(d => { const r = d * Math.PI / 180; return `<line x1="${(54 + 26 * Math.cos(r)).toFixed(1)}" y1="${(52 + 26 * Math.sin(r)).toFixed(1)}" x2="${(54 + 33 * Math.cos(r)).toFixed(1)}" y2="${(52 + 33 * Math.sin(r)).toFixed(1)}" stroke="#F2B544" stroke-width="2.4" stroke-linecap="round"/>`; }).join("");
+    [130, 175, 220].forEach(x => {
+      s += `<polyline points="${x},34 ${x + 8},46 ${x - 2},58 ${x + 10},70 ${x},82 ${x + 12},94 ${x + 4},106" fill="none" stroke="#8E5BB5" stroke-width="2.2" stroke-linejoin="round"/>`;
+      s += `<line x1="${x - 6}" y1="114" x2="${x + 18}" y2="114" stroke="#8E5BB5" stroke-width="3.4" stroke-linecap="round"/>`;
+    });
+    s += T(252, 72, L(t.uv), { weight: 600 }) + T(252, 92, L(t.uvSub), { size: 12, fill: "var(--ill-muted)" });
+    s += T(612, 22, L(t.eth), { anchor: "end", weight: 600 }) + T(612, 40, L(t.ethSub), { anchor: "end", size: 12, fill: "var(--ill-muted)" });
+    s += eth(470, 78) + eth(522, 60) + eth(588, 84);
+    s += `<rect x="24" y="124" width="592" height="48" rx="12" fill="var(--ill-film)"/>`;
+    s += T(42, 153, L(t.film), { size: 13, weight: 600, fill: "#FFFFFF" });
+    [180, 222, 318, 350, 440, 488, 598].forEach(x => { s += cdot(x, 148); });
+    [262, 396, 540].forEach(x => { s += mof(x, 148); });
+    s += arrow(532, 98, 538, 128, "var(--ill-muted)", 1.8);
+    [270, 330, 390].forEach(x => { s += arrow(x, 180, x, 236, "#C0A353", 2.2, "2 5"); });
+    s += T(40, 222, L(t.rel), { weight: 600 }) + T(40, 240, L(t.relSub), { size: 12, fill: "var(--ill-muted)" });
+    s += `<rect x="220" y="244" width="220" height="64" rx="28" fill="#EF8C6E"/>`;
+    [262, 300, 338, 376, 414].forEach(x => { s += `<path d="M${x} 250 q 14 26 0 52" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".5" stroke-linecap="round"/>`; });
+    s += T(612, 236, L(t.bug), { anchor: "end", weight: 600 });
+    s += bug(496, 264, -20) + bug(560, 278, 12) + bug(510, 304, 30);
+    s += cdot(44, 341, 4) + T(60, 346, L(t.lgC), { size: 12.5, fill: "var(--ill-muted)" });
+    s += mof(250, 341, 15) + T(266, 346, L(t.lgM), { size: 12.5, fill: "var(--ill-muted)" });
+    return s + `</svg>`;
+  },
+  intel() {
+    const t = {
+      title: { ko: "지능형 포장: 김치가 익을수록 라벨 색이 바뀌는 모습", en: "Intelligent packaging: a label changes color as kimchi ripens" },
+      time: { ko: "발효·저장 시간", en: "Fermentation and storage time" },
+      st: [{ ko: "갓 담근 김치", en: "Fresh" }, { ko: "잘 익은 김치", en: "Ripe" }, { ko: "너무 익은 김치", en: "Over-ripe" }],
+      sub: [{ ko: "CO₂ 적음 · 산도 낮음", en: "Low CO₂ · low acidity" }, { ko: "CO₂ 증가 · 산도 상승", en: "CO₂ rising · more acidic" }, { ko: "CO₂ 많음 · 산도 높음", en: "High CO₂ · very acidic" }],
+      l1: { ko: "라벨 색으로 김치 숙성도를 한눈에 확인", en: "The label shows ripeness at a glance" },
+      l2: { ko: "같은 원리로 육류·수산물의 부패 가스(아민)도 감지", en: "The same sensors detect spoilage amines in meat and seafood" }
+    };
+    const colors = ["#3FAE7A", "#E2A13A", "#D9534F"];
+    const bubbles = [
+      [[-30, 128], [22, 116]],
+      [[-38, 132], [-12, 112], [16, 126], [36, 106], [2, 136]],
+      [[-44, 130], [-30, 108], [-10, 124], [8, 104], [24, 132], [40, 116], [-20, 140], [30, 98], [44, 136]]
+    ];
+    let s = svgOpen(640, 360, L(t.title));
+    s += T(320, 24, L(t.time), { anchor: "middle", size: 13, fill: "var(--ill-muted)" }) + arrow(70, 40, 570, 40, "var(--ill-muted)", 2);
+    [120, 320, 520].forEach((c, i) => {
+      s += `<rect x="${c - 65}" y="82" width="130" height="150" rx="14" fill="var(--ill-card)" stroke="var(--ill-line)" stroke-width="2"/>`;
+      s += `<rect x="${c - 71}" y="64" width="142" height="22" rx="6" fill="var(--ill-film)"/><rect x="${c - 14}" y="58" width="28" height="8" rx="3" fill="var(--ill-film)"/>`;
+      bubbles[i].forEach(([dx, y], k) => { s += `<circle cx="${c + dx}" cy="${y}" r="${3.5 + (k % 3)}" fill="none" stroke="var(--ill-bubble)" stroke-width="1.6"/>`; });
+      s += `<rect x="${c - 56}" y="150" width="112" height="74" rx="10" fill="#D44A35"/>`;
+      s += `<path d="M${c - 44} 172 q 14 -12 28 0 M${c + 4} 166 q 14 -12 28 0 M${c - 30} 200 q 14 -12 28 0 M${c + 14} 204 q 12 -10 24 0" fill="none" stroke="#F49A72" stroke-width="3" stroke-linecap="round"/>`;
+      s += `<ellipse cx="${c - 36}" cy="214" rx="7" ry="3.5" fill="#93C05B"/><ellipse cx="${c + 34}" cy="182" rx="7" ry="3.5" fill="#93C05B"/>`;
+      s += `<rect x="${c - 34}" y="186" width="68" height="26" rx="13" fill="#FFFFFF" stroke="var(--ill-line)"/>`;
+      s += `<circle cx="${c - 18}" cy="199" r="8" fill="${colors[i]}"/><rect x="${c - 4}" y="196" width="26" height="6" rx="3" fill="${colors[i]}" opacity=".55"/>`;
+      s += T(c, 262, L(t.st[i]), { anchor: "middle", weight: 600 }) + T(c, 282, L(t.sub[i]), { anchor: "middle", size: 12, fill: "var(--ill-muted)" });
+    });
+    s += T(320, 320, L(t.l1), { anchor: "middle", weight: 600, size: 13.5 }) + T(320, 342, L(t.l2), { anchor: "middle", size: 12, fill: "var(--ill-muted)" });
+    return s + `</svg>`;
+  },
+  eco() {
+    const t = {
+      title: { ko: "친환경 포장 소재: 농산물 부산물이 필름이 되고 다시 자원으로 돌아가는 흐름", en: "Eco-friendly materials: crop by-products become film and return as resources" },
+      a: { ko: "농산물 부산물", en: "Crop by-products" }, aSub: { ko: "줄기·껍질·속대 등", en: "Stalks, husks, cobs" },
+      b: { ko: "나노셀룰로오스·탄소양자점", en: "Nanocellulose & carbon dots" }, bSub: { ko: "추출·정제", en: "Extracted and refined" },
+      c: { ko: "바이오 복합 필름", en: "Bio-composite film" }, cSub: { ko: "진주층 구조로 차단성 강화", en: "Nacre-like layers improve the barrier" },
+      d: { ko: "자연에서 생분해", en: "Biodegradable" }, e: { ko: "단일재질 재활용", en: "Mono-material recycling" },
+      back: { ko: "다시 자원으로", en: "Back to resources" }
+    };
+    let s = svgOpen(640, 360, L(t.title));
+    // by-products
+    s += `<g transform="rotate(-18 78 132)"><ellipse cx="78" cy="132" rx="20" ry="46" fill="#E9C46A"/>` +
+      [-30, -15, 0, 15, 30].map(y => `<line x1="62" y1="${132 + y}" x2="94" y2="${132 + y}" stroke="#C99A2E" stroke-width="1.4"/>`).join("") +
+      `<path d="M58 170 q -14 -40 6 -86" fill="none" stroke="#7FB069" stroke-width="5" stroke-linecap="round"/></g>`;
+    s += `<line x1="124" y1="180" x2="130" y2="84" stroke="#C9A34E" stroke-width="3" stroke-linecap="round"/>` +
+      [92, 108, 124, 140].map((y, k) => `<ellipse cx="${k % 2 ? 136 : 122}" cy="${y}" rx="6" ry="3.2" transform="rotate(${k % 2 ? 35 : -35} ${k % 2 ? 136 : 122} ${y})" fill="#D8B45A"/>`).join("");
+    s += T(95, 232, L(t.a), { anchor: "middle", weight: 600 }) + T(95, 250, L(t.aSub), { anchor: "middle", size: 12, fill: "var(--ill-muted)" });
+    s += arrow(160, 130, 205, 130);
+    // flask
+    s += `<path d="M252 78 h36 v34 l32 70 q5 14 -11 14 h-78 q-16 0 -11 -14 l32 -70 z" fill="var(--ill-card)" stroke="var(--ill-line)" stroke-width="2"/>`;
+    s += `<path d="M238 146 h64 l17 38 q5 12 -10 12 h-78 q-15 0 -10 -12 z" fill="#9ED3B5" opacity=".85"/>`;
+    s += `<path d="M248 166 l14 -6 M268 176 l16 -4 M252 186 l12 -8 M286 160 l10 6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>`;
+    s += cdot(298, 182, 3.5) + cdot(262, 172, 3.5);
+    s += T(270, 232, L(t.b), { anchor: "middle", weight: 600, size: 13.5 }) + T(270, 250, L(t.bSub), { anchor: "middle", size: 12, fill: "var(--ill-muted)" });
+    s += arrow(335, 130, 380, 130);
+    // film with nacre bricks
+    s += `<path d="M410 104 L560 92 L582 164 L432 176 Z" fill="var(--ill-film)" opacity=".9"/>`;
+    for (let r = 0; r < 4; r++) for (let k = 0; k < 4; k++) {
+      const x = 428 + k * 36 + (r % 2 ? 18 : 0) + r * 5.5, y = 112 + r * 15 - k * 3;
+      s += `<rect x="${x}" y="${y}" width="28" height="7" rx="2" fill="#FFFFFF" opacity=".42" transform="rotate(-4.5 ${x} ${y})"/>`;
+    }
+    s += `<path d="M560 92 q 18 -6 22 10 q 2 10 -8 12" fill="none" stroke="var(--ill-film)" stroke-width="3" stroke-linecap="round"/>`;
+    s += T(495, 232, L(t.c), { anchor: "middle", weight: 600 }) + T(495, 250, L(t.cSub), { anchor: "middle", size: 12, fill: "var(--ill-muted)" });
+    // end of life
+    s += arrow(470, 262, 340, 294, "var(--ill-muted)", 1.8) + arrow(510, 262, 520, 294, "var(--ill-muted)", 1.8);
+    s += `<rect x="200" y="298" width="200" height="40" rx="20" fill="var(--ill-card)" stroke="var(--ill-line)"/>`;
+    s += `<path d="M226 328 v-14 M226 318 q-10 -2 -12 -10 q10 0 12 10 M226 314 q8 -4 12 -12 q-10 0 -12 12" fill="#7CC48F" stroke="#4E9E62" stroke-width="1.6" stroke-linecap="round"/><path d="M214 330 h24" stroke="#A47148" stroke-width="2.4" stroke-linecap="round"/>`;
+    s += T(248, 323, L(t.d), { weight: 600, size: 13 });
+    s += `<rect x="410" y="298" width="220" height="40" rx="20" fill="var(--ill-card)" stroke="var(--ill-line)"/>`;
+    s += `<g fill="none" stroke="#3FAE7A" stroke-width="2.4" stroke-linecap="round"><path d="M428 312 a10 10 0 0 1 16 -2"/><path d="M446 320 a10 10 0 0 1 -6 12"/><path d="M432 332 a10 10 0 0 1 -6 -12"/></g>`;
+    s += `<path d="M441 306 l4 4 l-5 2 M442 334 l-5 -2 l3 -4 M424 318 l2 -5 l3 4" fill="none" stroke="#3FAE7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+    s += T(456, 323, L(t.e), { weight: 600, size: 13 });
+    s += `<path d="M200 318 C 120 318 95 304 95 270" fill="none" stroke="var(--ill-muted)" stroke-width="1.8" stroke-dasharray="4 5"/>` + arrow(95, 280, 95, 266, "var(--ill-muted)", 1.8);
+    s += T(112, 350, L(t.back), { size: 12, fill: "var(--ill-muted)" });
+    return s + `</svg>`;
+  },
+  safety() {
+    const t = {
+      title: { ko: "포장 안전성: 포장재에서 식품으로 옮겨가는 물질을 시험하는 과정", en: "Packaging safety: testing what moves from packaging into food" },
+      s: [
+        [{ ko: "모사용매에 담금", en: "Soak in simulant" }, { ko: "식품 대신 용매로 시험", en: "A liquid stands in for food" }],
+        [{ ko: "이행물질 채취", en: "Collect migrants" }, { ko: "옮겨간 물질만 모음", en: "What moved into the liquid" }],
+        [{ ko: "정밀 분석", en: "Precise analysis" }, { ko: "GC·LC·ICP 등", en: "GC, LC, ICP and more" }],
+        [{ ko: "안전 기준 확인", en: "Check safety limits" }, { ko: "기준 이내면 안전", en: "Safe if within limits" }]
+      ],
+      limit: { ko: "기준", en: "Limit" },
+      bottom: { ko: "식품용 기구·용기·포장이 안전한지 과학적으로 검증합니다", en: "We verify scientifically that food containers and packaging are safe" }
+    };
+    const cx = [90, 245, 410, 568];
+    let s = svgOpen(640, 360, L(t.title));
+    cx.forEach((x, i) => { s += `<circle cx="${x}" cy="40" r="14" fill="var(--ill-film)"/>` + T(x, 45, String(i + 1), { anchor: "middle", size: 13, weight: 600, fill: "#FFFFFF" }); });
+    // 1 beaker
+    s += `<path d="M48 76 h84 v136 q0 14 -14 14 h-56 q-14 0 -14 -14 z" fill="var(--ill-card)" stroke="var(--ill-line)" stroke-width="2"/>`;
+    s += `<rect x="50" y="130" width="80" height="94" rx="12" fill="#9FC7EE" opacity=".55"/>`;
+    s += `<rect x="78" y="92" width="12" height="118" rx="3" fill="var(--ill-film)" transform="rotate(-8 84 150)"/>`;
+    [[104, 152], [114, 172], [66, 186], [110, 200], [64, 160]].forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="3.6" fill="#E2A13A"/>`; });
+    s += arrow(150, 150, 196, 150);
+    // 2 vial
+    s += `<rect x="228" y="96" width="34" height="112" rx="8" fill="var(--ill-card)" stroke="var(--ill-line)" stroke-width="2"/><rect x="225" y="86" width="40" height="14" rx="3" fill="var(--ill-film)"/>`;
+    s += `<rect x="231" y="150" width="28" height="55" rx="6" fill="#9FC7EE" opacity=".55"/>`;
+    [[240, 166], [250, 182], [242, 194]].forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="3.2" fill="#E2A13A"/>`; });
+    s += arrow(292, 150, 332, 150);
+    // 3 instrument
+    s += `<rect x="345" y="84" width="130" height="124" rx="10" fill="var(--ill-card)" stroke="var(--ill-line)" stroke-width="2"/>`;
+    s += `<rect x="357" y="96" width="106" height="64" rx="4" fill="var(--ill-film)"/>`;
+    s += `<polyline points="363,150 380,150 386,124 392,150 410,150 416,108 422,150 440,150 445,136 450,150 458,150" fill="none" stroke="#7FE0C8" stroke-width="2" stroke-linejoin="round"/>`;
+    s += `<circle cx="368" cy="186" r="6" fill="var(--ill-line)"/><circle cx="388" cy="186" r="6" fill="var(--ill-line)"/><rect x="408" y="180" width="54" height="12" rx="3" fill="var(--ill-line)"/>`;
+    s += arrow(482, 150, 518, 150);
+    // 4 chart
+    s += `<path d="M528 92 V208 H630" fill="none" stroke="var(--ill-muted)" stroke-width="2"/>`;
+    s += `<line x1="528" y1="116" x2="630" y2="116" stroke="#D9534F" stroke-width="2" stroke-dasharray="5 4"/>` + T(630, 108, L(t.limit), { anchor: "end", size: 11.5, weight: 600, fill: "#D9534F" });
+    [[540, 160], [566, 140], [592, 172]].forEach(([x, y]) => { s += `<rect x="${x}" y="${y}" width="18" height="${208 - y}" rx="3" fill="#3FAE7A"/>`; });
+    s += `<circle cx="612" cy="146" r="11" fill="#3FAE7A"/><path d="M606 146 l4 4 l8 -8" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>`;
+    cx.forEach((x, i) => { s += T(x, 256, L(t.s[i][0]), { anchor: "middle", weight: 600, size: 13.5 }) + T(x, 275, L(t.s[i][1]), { anchor: "middle", size: 11.5, fill: "var(--ill-muted)" }); });
+    s += T(320, 330, L(t.bottom), { anchor: "middle", weight: 600, size: 13.5 });
+    return s + `</svg>`;
+  }
+};
+
+/* ===== 첫 화면 그림: 논문 그래픽 초록 형식(4개 패널), 패널에 마우스를 올리거나 선택하면 설명이 바뀌고 누르면 해당 연구로 이동 ===== */
+const FIG = [
+  { k: "active", letter: "a", col: "#1F6FB2", fill: "#F3F8FD", px: 16, py: 16,
+    t: { ko: "활성 포장", en: "Active packaging" }, s: { ko: "탄소양자점·MOF 기능성 필름", en: "Carbon dot & MOF films" },
+    d: { ko: "탄소양자점과 MOF를 담은 필름이 미생물·산화·자외선을 막고, 과일 숙성을 앞당기는 에틸렌을 흡착합니다.", en: "Films loaded with carbon dots and MOFs block microbes, oxidation and UV light, and capture the ethylene that speeds up ripening." } },
+  { k: "intel", letter: "b", col: "#C2541B", fill: "#FEF7F1", px: 388, py: 16,
+    t: { ko: "지능형 포장", en: "Intelligent packaging" }, s: { ko: "김치 숙성도 색 지시계", en: "Colorimetric ripeness indicators" },
+    d: { ko: "김치의 숙성도와 육류·수산물의 신선도를 라벨 색 변화로 보여주는 지시계를 개발합니다.", en: "Color-changing labels show the ripeness of kimchi and the freshness of meat and seafood without opening the package." } },
+  { k: "eco", letter: "c", col: "#2F8A4E", fill: "#F3FAF5", px: 16, py: 318,
+    t: { ko: "친환경 포장 소재", en: "Eco-friendly materials" }, s: { ko: "부산물 기반 진주층 모방 필름", en: "Nacre-inspired by-product films" },
+    d: { ko: "농산물 부산물에서 얻은 소재와 판상 나노시트로 진주층 구조를 만들어, 생분해되면서도 차단성과 강도가 높은 필름을 만듭니다.", en: "By-product materials and plate-like nanosheets form nacre-like films that biodegrade yet keep a high barrier and strength." } },
+  { k: "safety", letter: "d", col: "#6B4BB3", fill: "#F7F4FC", px: 388, py: 318,
+    t: { ko: "포장 안전성", en: "Packaging safety" }, s: { ko: "이행 시험·규격 적합성", en: "Migration & compliance" },
+    d: { ko: "포장재에서 식품으로 옮겨가는 물질을 식품 유사용매로 시험·분석해 기준 적합성을 검증하고, 국내 시험 기준 개선에 참여합니다.", en: "We test what moves from packaging into food using food simulants, check it against legal limits, and help improve Korea's test methods." } }
+];
+const FIG_CAP = { ko: "<b>그림.</b> FPPL 연구 한눈에 보기. 패널에 마우스를 올리면 설명이 나오고, 누르면 해당 연구로 이동합니다.",
+                  en: "<b>Figure.</b> FPPL research at a glance. Point to a panel to read about it, or select it to open that research." };
+const FC = { ink: "#1B2333", mut: "#566072", ax: "#46526A", line: "#B8C4D8", navy: "#0D326F" };
+const ft = (x, y, t, o = {}) => `<text x="${x}" y="${y}" font-size="${o.s || 12.5}" fill="${o.c || FC.mut}" text-anchor="${o.a || "start"}"${o.w ? ` font-weight="${o.w}"` : ""}${o.r ? ` transform="rotate(${o.r} ${x} ${y})"` : ""}${o.i ? ` font-style="italic"` : ""}>${t}</text>`;
+const fAxes = (x, y, w, h, xl, yl) => `<path d="M${x} ${y} V${y + h} H${x + w}" fill="none" stroke="${FC.ax}" stroke-width="1.4"/>` +
+  `<path d="M${x - 3.5} ${y + 6} L${x} ${y} L${x + 3.5} ${y + 6} M${x + w - 6} ${y + h - 3.5} L${x + w} ${y + h} L${x + w - 6} ${y + h + 3.5}" fill="none" stroke="${FC.ax}" stroke-width="1.4"/>` +
+  (xl ? ft(x + w / 2, y + h + 18, xl, { a: "middle" }) : "") + ft(x - 9, y + h / 2, yl, { a: "middle", r: -90 });
+const fCd = (x, y, r = 3.6) => `<circle cx="${x}" cy="${y}" r="${r * 1.9}" fill="#22AFC2" opacity=".22"/><circle cx="${x}" cy="${y}" r="${r}" fill="#139BB0"/>`;
+const fMof = (x, y, s = 11) => `<g transform="translate(${x - s / 2} ${y - s / 2})"><rect width="${s}" height="${s}" rx="1.5" fill="#FFF6DD" stroke="#D99A12" stroke-width="1.5"/><path d="M${s / 2} 0 V${s} M0 ${s / 2} H${s}" stroke="#D99A12" stroke-width="1"/><circle cx="0" cy="0" r="1.8" fill="#D99A12"/><circle cx="${s}" cy="0" r="1.8" fill="#D99A12"/><circle cx="0" cy="${s}" r="1.8" fill="#D99A12"/><circle cx="${s}" cy="${s}" r="1.8" fill="#D99A12"/></g>`;
+const fArrow = (x1, y1, x2, y2, c = FC.ax, dash = "") => {
+  const a = Math.atan2(y2 - y1, x2 - x1), h = 6;
+  const p = (da) => `${(x2 - h * Math.cos(a + da)).toFixed(1)} ${(y2 - h * Math.sin(a + da)).toFixed(1)}`;
+  return `<path d="M${x1} ${y1} L${x2} ${y2}" stroke="${c}" stroke-width="1.6"${dash ? ` stroke-dasharray="${dash}"` : ""} fill="none"/><path d="M${p(0.45)} L${x2} ${y2} L${p(-0.45)}" stroke="${c}" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+};
+const FIG_PANEL = {
+  active: f => {
+    let s = "";
+    // legend
+    s += fCd(22, 82) + ft(32, 86, L({ ko: "탄소양자점", en: "Carbon dot" }), { s: 11.5 }) + fMof(108, 82) + ft(118, 86, "MOF", { s: 11.5 });
+    // UV blocked
+    s += `<path d="M30 100 q7 6 0 12 t0 12 t0 12 t0 12" fill="none" stroke="#8E5BB5" stroke-width="2"/><path d="M20 160 H40" stroke="#8E5BB5" stroke-width="3" stroke-linecap="round"/>` + ft(40, 116, "UV", { s: 12, c: "#8E5BB5", w: 600 });
+    // microbe killed
+    s += `<rect x="78" y="116" width="34" height="16" rx="8" fill="#9BD3A8" stroke="#4E9E62" stroke-width="1.3"/><path d="M112 124 q6 -5 10 0 t9 0" fill="none" stroke="#4E9E62" stroke-width="1.3"/><path d="M86 112 L104 136 M104 112 L86 136" stroke="#D9534F" stroke-width="2.6" stroke-linecap="round"/>` + ft(95, 152, L({ ko: "미생물", en: "Microbes" }), { s: 11, a: "middle" });
+    // ethylene captured into MOF
+    s += `<line x1="158" y1="104" x2="174" y2="104" stroke="${FC.ax}" stroke-width="1.6"/><line x1="158" y1="108" x2="174" y2="108" stroke="${FC.ax}" stroke-width="1.6"/>` +
+      [[152, 98], [152, 114], [180, 98], [180, 114]].map(([x, y]) => `<line x1="${x < 166 ? 158 : 174}" y1="106" x2="${x}" y2="${y}" stroke="${FC.ax}" stroke-width="1.2"/><circle cx="${x}" cy="${y}" r="3.2" fill="#fff" stroke="${FC.ax}" stroke-width="1.1"/>`).join("") +
+      `<circle cx="158" cy="106" r="5.2" fill="#5B6474"/><circle cx="174" cy="106" r="5.2" fill="#5B6474"/>` + ft(166, 90, "C₂H₄", { s: 12, a: "middle", c: FC.ink, w: 600 }) +
+      fArrow(166, 122, 150, 176, FC.ax, "3 3");
+    // film cross-section
+    s += `<rect x="14" y="170" width="184" height="36" rx="5" fill="#DCE9F7" stroke="#1F6FB2" stroke-opacity=".75" stroke-width="1.2"/>` +
+      `<path d="M18 181 q11 -5 22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 M18 195 q11 -5 22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0" fill="none" stroke="#A9C3E0" stroke-width="1.1"/>` +
+      [[30, 188], [76, 184], [118, 192], [176, 186]].map(([x, y]) => fCd(x, y)).join("") + [[52, 188], [98, 188], [150, 186]].map(([x, y]) => fMof(x, y)).join("");
+    // food
+    s += `<rect x="14" y="214" width="184" height="58" rx="8" fill="#FCEDEA"/>` +
+      [[52, 246], [92, 250], [132, 246]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="15" fill="#E0533D"/><circle cx="${x - 5}" cy="${y - 5}" r="4" fill="#fff" opacity=".45"/><path d="M${x - 6} ${y - 13} l6 4 l6 -4" stroke="#3E8E4E" stroke-width="2.2" fill="none" stroke-linecap="round"/>`).join("") +
+      ft(190, 266, L({ ko: "식품", en: "Food" }), { s: 11.5, a: "end" });
+    // plot: UV-Vis transmittance
+    s += `<line x1="226" y1="80" x2="240" y2="80" stroke="#9AA4B2" stroke-width="2.4"/>` + ft(244, 84, L({ ko: "대조", en: "Neat" }), { s: 11.5 }) +
+      `<line x1="284" y1="80" x2="298" y2="80" stroke="#1F6FB2" stroke-width="2.4"/>` + ft(302, 84, L({ ko: "활성", en: "Active" }), { s: 11.5 });
+    s += `<rect x="230" y="96" width="34" height="134" fill="#8E5BB5" opacity=".08"/>` + ft(247, 110, "UV", { s: 11, a: "middle", c: "#8E5BB5", w: 600 });
+    s += fAxes(228, 94, 114, 138, "λ (nm)", "T (%)");
+    s += `<path d="M232 136 C252 116 276 108 338 104" fill="none" stroke="#9AA4B2" stroke-width="2.4"/>` +
+      `<path d="M232 227 L258 225 C272 222 280 170 296 146 C308 128 322 122 338 120" fill="none" stroke="#1F6FB2" stroke-width="2.6"/>`;
+    return s;
+  },
+  intel: f => {
+    let s = "";
+    // jar
+    s += `<rect x="24" y="84" width="112" height="14" rx="4" fill="${FC.navy}"/><rect x="30" y="98" width="100" height="122" rx="12" fill="#fff" stroke="${FC.line}" stroke-width="1.5"/>` +
+      `<path d="M34 142 h92 v66 q0 8 -8 8 h-76 q-8 0 -8 -8 z" fill="#D44A35"/>` +
+      `<path d="M42 160 q14 -8 26 2 M78 176 q14 -10 30 0 M46 194 q16 -8 30 2 M88 150 q10 -6 22 2" fill="none" stroke="#F3A08F" stroke-width="2" stroke-linecap="round"/>` +
+      `<rect x="44" y="108" width="72" height="26" rx="6" fill="#fff" stroke="${FC.line}"/><circle cx="58" cy="121" r="7" fill="#B0457E"/><path d="M71 117 h36 M71 125 h24" stroke="#C9D2E0" stroke-width="3" stroke-linecap="round"/>`;
+    // gas
+    s += [[152, 196, 5], [160, 176, 6.5], [150, 156, 4.5]].map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="#5C86C9" stroke-width="1.4"/>`).join("") +
+      ft(146, 114, "CO₂ ↑", { s: 13, c: FC.ink, w: 600 }) + ft(146, 134, "pH ↓", { s: 13, c: FC.ink, w: 600 });
+    // color scale
+    const sw = [["#5B4BA0", { ko: "초기", en: "Fresh" }], ["#B0457E", { ko: "적숙", en: "Optimum" }], ["#D9435A", { ko: "과숙", en: "Over-ripe" }]];
+    sw.forEach(([c, l], i) => { const x = 16 + i * 64; s += `<rect x="${x}" y="230" width="50" height="20" rx="5" fill="${c}"/>` + ft(x + 25, 268, L(l), { s: 11.5, a: "middle", c: FC.ink }); });
+    s += fArrow(67, 240, 79, 240) + fArrow(131, 240, 143, 240);
+    // plot: color difference over fermentation
+    s += ft(284, 84, L({ ko: "색 변화", en: "Color response" }), { s: 11.5, a: "middle", c: FC.ink, w: 600 });
+    s += fAxes(228, 94, 114, 138, L({ ko: "발효 기간", en: "Fermentation time" }), "ΔE");
+    s += `<path d="M232 224 C256 222 268 202 284 164 C298 130 316 114 338 108" fill="none" stroke="#C2541B" stroke-width="2.6"/>` +
+      [[236, 223, "#5B4BA0"], [285, 162, "#B0457E"], [334, 109, "#D9435A"]].map(([x, y, c]) => `<circle cx="${x}" cy="${y}" r="6" fill="${c}" stroke="#fff" stroke-width="1.6"/>`).join("");
+    return s;
+  },
+  eco: f => {
+    let s = "";
+    // by-product stalk
+    s += `<line x1="30" y1="134" x2="36" y2="80" stroke="#C9A34E" stroke-width="2.6" stroke-linecap="round"/>` +
+      [[26, 92, -35], [42, 100, 35], [27, 110, -35], [42, 118, 35]].map(([x, y, r]) => `<ellipse cx="${x}" cy="${y}" rx="7" ry="3.4" fill="#D8B45A" transform="rotate(${r} ${x} ${y})"/>`).join("") +
+      ft(34, 152, L({ ko: "부산물", en: "By-product" }), { s: 11, a: "middle" }) + fArrow(56, 108, 74, 108);
+    // cellulose fibrils
+    s += [0, 1, 2, 3, 4].map(i => `<path d="M80 ${92 + i * 8} q12 -6 24 0 t24 0" fill="none" stroke="#2F8A4E" stroke-width="1.8" stroke-linecap="round"/>`).join("") +
+      ft(104, 152, L({ ko: "셀룰로오스", en: "Cellulose" }), { s: 11, a: "middle" }) + ft(138, 114, "+", { s: 18, a: "middle", c: FC.ink, w: 600 });
+    // LDH nanosheets
+    s += [0, 1, 2].map(i => `<path d="M${152} ${100 + i * 10} l12 -8 h32 l-12 8 z" fill="#7F9CC4" stroke="#4E6E9C" stroke-width="1"/>`).join("") +
+      ft(172, 152, L({ ko: "LDH 나노시트", en: "LDH sheets" }), { s: 11, a: "middle" });
+    // nacre brick-and-mortar
+    s += `<rect x="14" y="176" width="184" height="78" rx="6" fill="#D6EFDD"/>`;
+    const rowY = [181, 198, 215, 232];
+    rowY.forEach((y, r) => {
+      const xs = r % 2 ? [[14, 22], [40, 38], [84, 38], [128, 38], [172, 26]] : [[18, 38], [62, 38], [106, 38], [150, 38]];
+      xs.forEach(([x, w]) => { s += `<rect x="${x}" y="${y}" width="${w}" height="12" rx="2.5" fill="#7F9CC4"/>`; });
+    });
+    s += `<path d="M59 168 V196.5 H81 V213.5 H103 V230.5 H125 V250" fill="none" stroke="#E07B2A" stroke-width="2" stroke-dasharray="4 3"/><path d="M121 245 L125 252 L129 245" fill="none" stroke="#E07B2A" stroke-width="2" stroke-linecap="round"/>` +
+      ft(66, 172, "H₂O · O₂", { s: 11.5, c: "#C0611C", w: 600 }) + ft(106, 270, L({ ko: "진주층 모방 구조", en: "Nacre-like layers" }), { s: 11.5, a: "middle", c: FC.ink });
+    // plot: grouped bars
+    s += `<rect x="226" y="74" width="10" height="10" rx="2" fill="#B8C0CC"/>` + ft(240, 84, L({ ko: "기존", en: "Neat" }), { s: 11.5 }) +
+      `<rect x="282" y="74" width="10" height="10" rx="2" fill="#2F8A4E"/>` + ft(296, 84, L({ ko: "진주층형", en: "Nacre" }), { s: 11.5 });
+    s += fAxes(228, 94, 114, 138, "", L({ ko: "상대값", en: "Relative value" }));
+    s += `<rect x="238" y="122" width="17" height="110" fill="#B8C0CC"/><rect x="257" y="184" width="17" height="48" fill="#2F8A4E"/>` +
+      `<rect x="294" y="176" width="17" height="56" fill="#B8C0CC"/><rect x="313" y="114" width="17" height="118" fill="#2F8A4E"/>` +
+      ft(265.5, 178, "↓", { s: 14, a: "middle", c: "#2F8A4E", w: 700 }) + ft(321.5, 108, "↑", { s: 14, a: "middle", c: "#2F8A4E", w: 700 }) +
+      ft(256, 249, L({ ko: "투습도", en: "WVP" }), { s: 11.5, a: "middle", c: FC.ink }) + ft(312, 249, L({ ko: "인장강도", en: "Strength" }), { s: 11.5, a: "middle", c: FC.ink });
+    return s;
+  },
+  safety: f => {
+    let s = "";
+    // beaker with simulant and film strip
+    s += `<path d="M30 92 h90 M36 92 v132 q0 14 14 14 h50 q14 0 14 -14 v-132" fill="#fff" stroke="${FC.line}" stroke-width="1.6"/>` +
+      `<path d="M37 146 h76 v78 q0 13 -13 13 h-50 q-13 0 -13 -13 z" fill="#D3E5F8"/>` +
+      `<path d="M37 146 h76" stroke="#9FC2E8" stroke-width="1.4"/>` +
+      `<rect x="68" y="104" width="12" height="118" rx="2" fill="${FC.navy}" transform="rotate(-8 74 163)"/>` +
+      [[52, 170], [98, 162], [56, 204], [100, 196], [86, 224], [50, 226], [94, 180]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3.6" fill="#E2A13A"/>`).join("") +
+      ft(75, 262, L({ ko: "식품 유사용매", en: "Food simulant" }), { s: 11.5, a: "middle", c: FC.ink });
+    // thermometer + conditions
+    s += `<rect x="146" y="100" width="10" height="84" rx="5" fill="#fff" stroke="${FC.line}" stroke-width="1.4"/><circle cx="151" cy="192" r="10" fill="#E86A5A"/><rect x="149" y="130" width="4" height="60" rx="2" fill="#E86A5A"/>` +
+      ft(151, 220, L({ ko: "온도·시간", en: "T, t" }), { s: 11.5, a: "middle" }) +
+      `<circle cx="36" cy="80" r="3.6" fill="#E2A13A"/>` + ft(44, 84, L({ ko: "이행 물질", en: "Migrants" }), { s: 11.5 });
+    // plot: migration vs limit
+    s += `<circle cx="256" cy="79" r="8" fill="#E9F6EF" stroke="#2F8A4E" stroke-width="1.4"/><path d="M252 79 l3 3 l5 -6" fill="none" stroke="#2F8A4E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>` +
+      ft(268, 84, L({ ko: "기준 적합", en: "Compliant" }), { s: 11.5, c: "#2F8A4E", w: 600 });
+    s += fAxes(228, 94, 114, 138, "", L({ ko: "이행량", en: "Migration" }));
+    s += `<line x1="230" y1="134" x2="340" y2="134" stroke="#D9534F" stroke-width="1.6" stroke-dasharray="5 4"/>` + ft(340, 127, L({ ko: "기준치", en: "Limit" }), { s: 11, a: "end", c: "#D9534F", w: 600 });
+    [[242, 44], [276, 66], [310, 30]].forEach(([x, h], i) => { s += `<rect x="${x}" y="${232 - h}" width="20" height="${h}" fill="#6B4BB3" opacity=".8"/>` + ft(x + 10, 249, "ABC"[i], { s: 11.5, a: "middle", c: FC.ink }); });
+    return s;
+  }
+};
+function overviewSVG() {
+  const W = 760, H = 620;
+  const label = { ko: "FPPL의 네 가지 연구 분야(활성 포장, 지능형 포장, 친환경 포장 소재, 포장 안전성)를 네 개의 패널로 정리한 그래픽 초록", en: "Graphical abstract summarizing FPPL's four research areas (active, intelligent, eco-friendly, safety) in four panels" };
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(L(label))}">`;
+  FIG.forEach(f => {
+    s += `<a href="#area-${f.k}" data-k="${f.k}" aria-label="${esc(L(f.t))}"><g class="sector" data-k="${f.k}" style="--dx:0px;--dy:-4px"><g transform="translate(${f.px} ${f.py})">`;
+    s += `<rect class="ring" width="356" height="286" rx="14" fill="${f.fill}" stroke="${f.col}" stroke-opacity=".35" stroke-width="1.4"/>`;
+    s += `<circle cx="28" cy="30" r="14" fill="${f.col}"/><text x="28" y="35" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" font-family="Outfit, sans-serif">${f.letter}</text>`;
+    s += ft(52, 30, esc(L(f.t)), { s: 19, w: 600, c: f.col }) + ft(52, 50, esc(L(f.s)), { s: 13 });
+    s += `<line x1="16" y1="62" x2="340" y2="62" stroke="${f.col}" stroke-opacity=".22"/>`;
+    s += FIG_PANEL[f.k](f) + `</g></g></a>`;
+  });
+  return s + `</svg>`;
+}
+function renderOverview() {
+  const box = document.getElementById("overview"), cap = document.getElementById("overview-cap");
+  box.innerHTML = overviewSVG();
+  const svg = box.querySelector("svg");
+  const setCap = k => {
+    const f = FIG.find(x => x.k === k);
+    cap.innerHTML = f ? `<b>(${f.letter}) ${esc(L(f.t))}.</b> ${esc(L(f.d))}` : L(FIG_CAP);
+    svg.classList.toggle("has-active", !!f);
+    svg.querySelectorAll(".sector").forEach(g => g.classList.toggle("on", !!f && g.dataset.k === k));
+  };
+  svg.querySelectorAll("a[data-k]").forEach(a => {
+    a.addEventListener("mouseenter", () => setCap(a.dataset.k));
+    a.addEventListener("focus", () => setCap(a.dataset.k));
+    a.addEventListener("mouseleave", () => setCap(null));
+    a.addEventListener("blur", () => setCap(null));
+  });
+  setCap(null);
+}
+
+/* ===== 화면 그리기 ===== */
+const GROUPS = [
+  ["researcher", { ko: "연구교수·박사후연구원", en: "Research Faculty & Postdocs" }],
+  ["phd", { ko: "석박사통합과정", en: "Integrated M.S./Ph.D." }],
+  ["ms", { ko: "석사과정", en: "M.S. Students" }],
+  ["alumni", { ko: "졸업생", en: "Alumni" }]
+];
+const TAGS = { award: "tagAward", lab: "tagLab", media: "tagMedia", story: "tagStory" };
+const SCHOLAR_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 L1 9 L12 15 L21 10.1 V17 H23 V9 Z M5 13.2 V17 C5 19 8.1 21 12 21 C15.9 21 19 19 19 17 V13.2 L12 17 Z" fill="currentColor"/></svg>`;
+let mFilter = "researcher", pYear = String(Math.max(...LAB.publications.map(p => p.year)));
+const search = document.getElementById("pub-search");
+
+// 대표 논문 그림 + 출처 캡션. fig에 이미지 경로(또는 데이터)를 넣으면 그림이 나오고, 빈칸이면 [예시] 자리 표시
+function paperFig(p) {
+  if (!p) return "";
+  const authors = esc(p.authors).replace("Kim, J. T.", "<b>Kim, J. T.</b>");
+  const src = p.fig ? (PAPER_FIG[p.fig] || p.fig) : "";
+  const box = src ? `<div class="pf"><img src="${src}" alt="${esc(p.figCap ? L(p.figCap) : p.title)}" loading="lazy"></div>${p.figCap ? `<p class="fcap">${mark(p.figCap)}</p>` : ""}` : `<div class="pf tbd"><div>${mark(UI.figTbd)}</div></div>`;
+  return `<figure class="paper">${box}<figcaption><span class="lead">${mark(UI.ourWork)}</span>${authors} (${p.year}). <span class="pt">${esc(p.title)}</span>. <i>${esc(p.journal)}</i>, ${esc(p.ref)}.<span class="if">IF ${esc(p.impact)}</span><a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">DOI ↗</a></figcaption></figure>`;
+}
+function scholarLink(url) {
+  return url ? `<a class="scholar" href="${esc(url)}" target="_blank" rel="noopener">${SCHOLAR_ICON}Google Scholar ↗</a>`
+             : `<span class="scholar off">${SCHOLAR_ICON}${mark(UI.scholarTbd)}</span>`;
+}
+
+function render() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-logo]").forEach(el => { el.innerHTML = `<img src="${KHU_LOGO[lang]}" alt="${lang === "ko" ? "경희대학교" : "Kyung Hee University"}">`; });
+  document.querySelectorAll("[data-fppl]").forEach(el => { el.innerHTML = `<img class="on-light" src="${FPPL_LOGO.light}" alt="Food Processing &amp; Packaging Lab"><img class="on-dark" src="${FPPL_LOGO.dark}" alt="Food Processing &amp; Packaging Lab">`; });
+  document.querySelectorAll("[data-i]").forEach(el => { const v = UI[el.dataset.i]; if (v) el.innerHTML = markHTML(v); });
+  search.placeholder = L(UI.searchPh);
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  renderOverview();
+
+  document.getElementById("facts").innerHTML = UI.facts.map(([k, v]) => `<div><dt>${mark(k)}</dt><dd>${mark(v)}</dd></div>`).join("");
+  const p1 = document.getElementById("lab-photo-1"), p2 = document.getElementById("lab-photo-2");
+  p1.src = GROUP_PHOTO; p1.alt = L(UI.groupPhotoAlt); p2.src = LAB_PHOTO; p2.alt = L(UI.labPhotoAlt);
+
+  document.getElementById("areas").innerHTML = LAB.areas.map((a, i) => `
+    <article class="area" id="area-${a.art}">
+      <div class="ill">${ART[a.art] ? ART[a.art]() : ""}</div>
+      <div class="body"><div class="num">${String(i + 1).padStart(2, "0")} · ${esc(a.en)}</div><h3>${mark(a.title)}</h3><p>${mark(a.text)}</p>
+      <div class="tags">${a.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div></div>
+      ${a.deep ? `<div class="deep"><div>
+        <h4>${mark(UI.deepBg)}</h4><p>${mark(a.deep.bg)}</p>
+        <h4>${mark(UI.deepMethod)}</h4><p>${mark(a.deep.method)}</p>
+        <h4>${mark(UI.deepCase)}</h4><p>${mark(a.deep.case)}</p></div>
+        ${paperFig(a.paper)}</div>` : ""}
+    </article>`).join("");
+  document.getElementById("patents").innerHTML = LAB.patents.map(p => `
+    <div class="patent"><div><b>${mark(p.title)}</b><div class="meta">${esc(p.year)} · ${esc(p.no)}</div></div>
+    <span class="status ${p.status.en === "Registered" ? "on" : ""}">${mark(p.status)}</span></div>`).join("");
+
+  const P = LAB.professor;
+  document.getElementById("prof").innerHTML = `
+    <div class="photo"><img src="${PROF_PHOTO}" alt="${esc(L(P.name))}"></div>
+    <div><div class="role">${mark(P.role)}</div><h3>${mark(P.name)}<small>${mark(P.sub)}</small></h3>
+    <p>${mark(P.bio)}</p>
+    <dl class="pinfo">${P.info.map(([k, v, href]) => `<dt>${mark(k)}</dt><dd>${href ? `<a href="${esc(href)}" target="_blank" rel="noopener">${mark(v)}</a>` : mark(v)}</dd>`).join("")}
+      </dl>
+    <div class="metrics">${P.metrics.map(m => `<div><b>${esc(m.v)}</b><span>${mark(m.k)}</span></div>`).join("")}</div>
+    <p class="note">${mark(UI.metricsNote)}</p>
+    ${P.awards && P.awards.length ? `<div class="awards"><h4>${mark(UI.awardsTitle)}</h4><ul>${P.awards.map(a => `<li><time>${esc(a.year)}</time><span>${mark(a.text)}</span></li>`).join("")}</ul></div>` : ""}</div>`;
+
+  document.getElementById("member-filters").innerHTML = GROUPS.map(([g, l]) =>
+    `<button type="button" id="mf-${g}" data-g="${g}" aria-pressed="${g === mFilter}">${mark(l)} <small>${LAB.members.filter(m => m.group === g).length}</small></button>`).join("");
+  renderMembers();
+
+  const years = [...new Set(LAB.publications.map(p => p.year))].sort((a, b) => b - a);
+  const cnt = y => LAB.publications.filter(p => p.year === y).length;
+  document.getElementById("pub-filters").innerHTML = years.map(y => `<button type="button" id="py-${y}" data-y="${y}" aria-pressed="${pYear === String(y)}">${y} <small>${cnt(y)}</small></button>`)
+    .concat([`<button type="button" id="py-all" data-y="all" aria-pressed="${pYear === "all"}">${mark(UI.fAll)} <small>${LAB.publications.length}</small></button>`]).join("");
+  renderPubs();
+
+  document.getElementById("feature").innerHTML = `
+    <div class="pic"><img src="${PROF_FEATURE}" alt="${esc(L(UI.featAlt))}"><span class="credit">${esc(L(UI.credit))}</span></div>
+    <div class="txt"><div class="src">${esc(L(UI.featSrc))}</div><h3>${esc(L(UI.featTitle))}</h3><p class="sub">${esc(L(UI.featSub))}</p>
+    <p class="sum">${esc(L(UI.featSum))}</p>
+    <div class="fstats">${UI.featStats.map(x => `<div><b>${esc(x.v)}</b><span>${esc(L(x.k))}</span></div>`).join("")}</div>
+    <a href="https://news.khu.ac.kr/news_kor/user/webzine/cType.do?wcId=4059" target="_blank" rel="noopener">${esc(L(UI.featLink))}</a></div>`;
+  document.getElementById("news-list").innerHTML = LAB.news.map(n => `<li><time>${mark(n.date)}</time><span>${n.tag ? `<span class="tag ${esc(n.tag)}">${mark(UI[TAGS[n.tag]])}</span>` : ""}${mark(n.text)}</span></li>`).join("");
+  renderGallery();
+  markNav();
+}
+
+function renderMembers() {
+  const list = LAB.members.filter(m => m.group === mFilter);
+  const yr = y => y ? esc(y) : mark(UI.yearTbd);
+  document.getElementById("member-grid").innerHTML = list.length ? list.map(m => {
+    const psrc = m.photo ? (MEMBER_PHOTOS[m.photo] || m.photo) : "";
+    const photo = psrc ? `<div class="photo"><img src="${psrc}" alt="${esc(L(m.name))}"></div>` : `<div class="photo" role="img" aria-label="${esc(L(m.name))}">${esc(m.initials)}</div>`;
+    let info = "";
+    if (m.group === "researcher") info = m.interest ? `<p class="field">${mark(m.interest)}</p>` : "";
+    else if (m.group === "alumni") info = `<div class="meta">${mark(UI.graduated)} ${yr(m.year)}</div><p class="work"><span>${mark(UI.workplace)}</span>${m.workplace ? mark(m.workplace) : mark(UI.workTbd)}</p>`;
+    else info = `<div class="meta">${mark(UI.admitted)} ${yr(m.year)}</div><p class="field">${m.research ? mark(m.research) : mark(UI.researchTbd)}</p>`;
+    return `<article class="member">${photo}<h4>${mark(m.name)}</h4><div class="pos">${mark(m.pos)}</div>${info}${m.group === "researcher" ? scholarLink(m.scholar) : ""}</article>`;
+  }).join("") : `<p class="empty">${mark(UI.noMembers)}</p>`;
+}
+
+function renderPubs() {
+  const q = search.value.trim().toLowerCase();
+  const list = LAB.publications
+    .filter(p => q || pYear === "all" || String(p.year) === pYear)
+    .filter(p => !q || [p.title, p.authors, p.source].join(" ").toLowerCase().includes(q));
+  document.getElementById("pub-count").textContent = L(UI.pubCount).replace("{n}", list.length);
+  document.getElementById("pub-list").innerHTML = list.length ? list.map(p => `
+    <li class="pub"><div class="yr">${p.year}</div><div>
+    <p class="t">${p.doi ? `<a href="https://doi.org/${esc(p.doi)}" target="_blank" rel="noopener">${mark(p.title)}</a>` : mark(p.title)}<span class="type">${esc(p.type)}</span></p>
+    <p class="a">${esc(p.authors).replace("Kim, J. T.", "<b>Kim, J. T.</b>")}</p><p class="j">${esc(p.source)}</p></div></li>`).join("")
+    : `<li class="pub"><span></span><span class="empty">${mark(UI.noPubs)}</span></li>`;
+}
+
+/* ===== 갤러리 ===== */
+const IMG = { GROUP_PHOTO, LAB_PHOTO, PROF_FEATURE };
+const imgSrc = s => IMG[s] || s;
+let gFilter = "all", gList = [], gIndex = 0;
+function renderGallery() {
+  const cats = [["all", UI.gAll], ["lab", UI.gLab], ["event", UI.gEvent], ["media", UI.gMedia]]
+    .filter(([c]) => c === "all" || LAB.gallery.some(g => g.category === c));
+  document.getElementById("gallery-filters").innerHTML = cats.map(([c, l]) =>
+    `<button type="button" id="gf-${c}" data-c="${c}" aria-pressed="${c === gFilter}">${mark(l)}</button>`).join("");
+  gList = LAB.gallery.filter(g => gFilter === "all" || g.category === gFilter);
+  document.getElementById("gallery-grid").innerHTML = gList.map((g, i) => `
+    <figure class="g-item"><button type="button" data-idx="${i}" aria-label="${esc(L(g.caption))}"><img src="${imgSrc(g.src)}" alt="${esc(L(g.caption))}" loading="lazy"></button>
+    <figcaption><time>${esc(g.date)}</time>${esc(L(g.caption))}</figcaption></figure>`).join("");
+}
+const lb = document.getElementById("lightbox");
+function openLb(i) {
+  gIndex = (i + gList.length) % gList.length; const g = gList[gIndex];
+  document.getElementById("lb-img").src = imgSrc(g.src); document.getElementById("lb-img").alt = L(g.caption);
+  document.getElementById("lb-cap").textContent = `${g.date} · ${L(g.caption)}`;
+  lb.hidden = false; document.getElementById("lb-close").focus();
+}
+
+/* ===== 이벤트 ===== */
+document.querySelector(".lang").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.dataset.lang === lang) return;
+  lang = b.dataset.lang; render();
+});
+document.getElementById("member-filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  mFilter = b.dataset.g; document.querySelectorAll("#member-filters button").forEach(x => x.setAttribute("aria-pressed", x === b)); renderMembers();
+});
+document.getElementById("pub-filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  pYear = b.dataset.y; document.querySelectorAll("#pub-filters button").forEach(x => x.setAttribute("aria-pressed", x === b)); renderPubs();
+});
+search.addEventListener("input", renderPubs);
+document.getElementById("gallery-filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return; gFilter = b.dataset.c; renderGallery();
+});
+document.getElementById("gallery-grid").addEventListener("click", e => { const b = e.target.closest("button[data-idx]"); if (b) openLb(+b.dataset.idx); });
+document.getElementById("lb-close").addEventListener("click", () => { lb.hidden = true; });
+document.getElementById("lb-prev").addEventListener("click", () => openLb(gIndex - 1));
+document.getElementById("lb-next").addEventListener("click", () => openLb(gIndex + 1));
+lb.addEventListener("click", e => { if (e.target === lb) lb.hidden = true; });
+addEventListener("keydown", e => {
+  if (lb.hidden) return;
+  if (e.key === "Escape") lb.hidden = true; else if (e.key === "ArrowLeft") openLb(gIndex - 1); else if (e.key === "ArrowRight") openLb(gIndex + 1);
+});
+
+/* ===== 탭 이동: 홈(히어로+About)과 각 탭을 주소의 #이름으로 전환 ===== */
+const VIEWS = ["home", "research", "people", "publications", "news", "gallery"];
+let view = "home";
+function markNav() {
+  document.querySelectorAll(".nav a[data-v]").forEach(a => { if (a.dataset.v === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+}
+function route() {
+  const h = location.hash.slice(1);
+  if (h === "contact") { document.getElementById("contact").scrollIntoView(); return; }
+  const area = h.startsWith("area-") && document.getElementById(h);
+  const next = area ? "research" : VIEWS.includes(h) ? h : "home";
+  const changed = next !== view;
+  view = next;
+  document.querySelectorAll("main > [data-view]").forEach(s => { s.hidden = s.dataset.view !== view; });
+  markNav();
+  if (h === "about" || area) requestAnimationFrame(() => document.getElementById(area ? h : "about").scrollIntoView());
+  else if (changed || h) scrollTo(0, 0);
+}
+addEventListener("hashchange", route);
+
+render();
+route();
+
+/* ===== 소개 사진 슬라이드: 두 사진이 번갈아 나타남 ===== */
+(function () {
+  const slides = [document.getElementById("lab-photo-1"), document.getElementById("lab-photo-2")];
+  const dots = [document.getElementById("dot-1"), document.getElementById("dot-2")];
+  let cur = 0, timer = null;
+  const show = i => { cur = i; slides.forEach((s, k) => s.classList.toggle("on", k === i)); dots.forEach((d, k) => d.setAttribute("aria-pressed", k === i)); };
+  const start = () => { if (!matchMedia("(prefers-reduced-motion: reduce)").matches) timer = setInterval(() => { if (!document.hidden) show((cur + 1) % slides.length); }, 5500); };
+  dots.forEach((d, k) => d.addEventListener("click", () => { clearInterval(timer); show(k); start(); }));
+  start();
+})();
+</script>
+
+</body>
+</html>
