@@ -18,15 +18,13 @@ README.md             이 안내서
 
 미리 보기: `index.html`을 더블클릭하면 브라우저에서 바로 열립니다.
 
-## 처음 게시하기 (GitHub Pages, 무료)
+## 게시 현황
 
-1. 연구실 공용 이메일로 GitHub 계정을 만듭니다 (예: `fppl-khu`). 개인 계정 대신 공용 계정을 쓰면 담당자가 바뀌어도 그대로 넘길 수 있습니다.
-2. 오른쪽 위 **+ → New repository**에서 이름을 `fppl-khu.github.io`(계정이름.github.io)로 만들고 **Public**으로 둡니다.
-3. **Add file → Upload files**에서 이 폴더 안의 내용(`index.html`, `images` 폴더, `README.md`)을 끌어다 놓고 **Commit changes**를 누릅니다.
-4. **Settings → Pages**에서 Source를 **Deploy from a branch**, Branch를 **main / (root)** 로 저장합니다.
-5. 1–2분 뒤 `https://fppl-khu.github.io` 에서 사이트가 열립니다.
+- 사이트 주소: https://fppl-khu.github.io
+- GitHub 조직 `fppl-khu`의 저장소 `fppl-khu.github.io`에 있으며, 이 저장소에 파일을 올리면 1–2분 뒤 사이트에 자동 반영됩니다.
+- 관리자 추가·인수인계: 조직 페이지 **People → Invite member**에서 새 관리자를 **Owner**로 초대합니다. 각자 개인 계정으로 로그인하므로 공유 비밀번호가 없습니다. 담당자가 졸업하면 다음 담당자를 Owner로 추가한 뒤 빠지면 됩니다.
 
-도메인(예: `fppl.kr`)을 쓰고 싶으면 도메인을 산 뒤 **Settings → Pages → Custom domain**에 입력하고, 도메인 업체에서 GitHub 안내대로 DNS를 설정합니다.
+학교 주소(예: `fppl.khu.ac.kr`)나 별도 도메인을 연결하려면: 조직 **Settings → Pages**에서 도메인 소유 확인(TXT)을 시작하고, 저장소 **Settings → Pages → Custom domain**에 주소를 입력한 뒤, 정보처(또는 도메인 업체)에 `CNAME fppl-khu.github.io`와 TXT 레코드 등록을 요청합니다. 반영 후 **Enforce HTTPS**를 켭니다.
 
 ## 내용 고치기
 
